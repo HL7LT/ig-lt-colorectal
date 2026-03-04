@@ -3,6 +3,7 @@ Id: fecal-occult-blood-test-codes-lt-colorectal
 Title: "Colorectal - Fecal Occult Blood Test VS"
 Description: "LOINC codes for fecal occult blood (hemoglobin) testing."
 * ^status = #active
+* ^experimental = false
 * ^publisher = "HL7 Lithuania"
 
 * $loinc#80372-6 "Hemoglobin [Presence] in Stool from gastrointestinal by Rapid immunoassay"
@@ -13,6 +14,7 @@ Id: fecal-occult-blood-qualitative-result-lt-colorectal
 Title: "Colorectal - FOBT Qualitative Result VS"
 Description: "Qualitative result values for fecal occult blood testing."
 * ^status = #active
+* ^experimental = false
 * ^publisher = "HL7 Lithuania"
 
 * $sct#260373001 "Detected (qualifier value)"
@@ -35,7 +37,7 @@ Title: "Observation: Colorectal - FOBT Qualitative Not Detected Example"
 Description: "Example of a qualitative fecal occult blood test result with 'Not detected' value."
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
-* code = $loinc#80372-6 "Hemoglobin [Presence] in Stool from gastrointestinal by Rapid immunoassay"
+* code = $loinc#80372-6 "Hemoglobin.gastrointestinal [Presence] in Stool by Rapid immunoassay"
 * subject = Reference(example-patient-male)
 * effectiveDateTime = "2026-02-26"
 * specimen = Reference(specimen-colorectal-fobt-example)
@@ -49,7 +51,7 @@ Title: "Observation: Colorectal - FOBT Qualitative Detected Example"
 Description: "Example of a qualitative fecal occult blood test result with 'Detected' value."
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
-* code = $loinc#80372-6 "Hemoglobin [Presence] in Stool from gastrointestinal by Rapid immunoassay"
+* code = $loinc#80372-6 "Hemoglobin.gastrointestinal [Presence] in Stool by Rapid immunoassay"
 * subject = Reference(example-patient-male)
 * effectiveDateTime = "2026-02-26"
 * specimen = Reference(specimen-colorectal-fobt-example)
@@ -63,7 +65,7 @@ Title: "Observation: Colorectal - FOBT Quantitative Example"
 Description: "Example of a quantitative fecal occult blood test result."
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
-* code = $loinc#27396-1 "Hemoglobin [Mass/mass] in Stool from gastrointestinal"
+* code = $loinc#27396-1 "Hemoglobin.gastrointestinal [Mass/mass] in Stool"
 * subject = Reference(example-patient-male)
 * effectiveDateTime = "2026-02-26"
 * specimen = Reference(specimen-colorectal-fobt-example)
