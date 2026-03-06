@@ -45,7 +45,7 @@ Title: "Observation: Colorectal - Colonoscope Reach Example (Cecum)"
 Description: "Example of an observation recording that the colonoscope reached the Cecum."
 * status = #final
 * category = $observation-category#procedure "Procedure"
-* code = $sct#73761001 "Colonoscopy (procedure)"
+* code = $sct#444783004 "Screening colonoscopy (procedure)"
 * subject = Reference(example-patient-male)
 * performer = Reference(example-practitioner)
 * effectiveDateTime = "2026-02-26"
