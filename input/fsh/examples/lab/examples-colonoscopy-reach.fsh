@@ -6,7 +6,7 @@ Description: "Profile for recording how far the colonoscope reached during a col
 * ^status = #active
 * ^publisher = "HL7 Lithuania"
 * category = $observation-category#procedure "Procedure"
-* code = $sct#73761001 "Colonoscopy (procedure)"
+* code = $sct#444783004 "Screening colonoscopy (procedure)"
 * code MS
 * subject 1..1 MS
 * subject only Reference(LTBasePatient)
@@ -60,7 +60,7 @@ Title: "Observation: Colorectal - Colonoscope Reach Example (Terminal Ileum)"
 Description: "Example of an observation recording that the colonoscope reached the Terminal ileum."
 * status = #final
 * category = $observation-category#procedure "Procedure"
-* code = $sct#73761001 "Colonoscopy (procedure)"
+* code = $sct#444783004 "Screening colonoscopy (procedure)"
 * subject = Reference(example-patient-male)
 * performer = Reference(example-practitioner)
 * effectiveDateTime = "2026-02-26"
@@ -73,7 +73,7 @@ Title: "Observation: Colorectal - Colonoscope Reach Example (Splenic Flexure)"
 Description: "Example of an observation recording that the colonoscope only reached the Splenic flexure (incomplete examination)."
 * status = #final
 * category = $observation-category#procedure "Procedure"
-* code = $sct#73761001 "Colonoscopy (procedure)"
+* code = $sct#444783004 "Screening colonoscopy (procedure)"
 * subject = Reference(example-patient-male)
 * performer = Reference(example-practitioner)
 * effectiveDateTime = "2026-02-26"
