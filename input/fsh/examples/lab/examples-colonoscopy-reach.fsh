@@ -53,6 +53,8 @@ Description: "Example of an observation recording that the colonoscope reached t
 
 /*
 
+Will later decide whether to use an already existing profile or not
+
 Instance: observation-colonoscope-reach-ileum-example
 InstanceOf: LTBaseObservation
 Usage: #example
