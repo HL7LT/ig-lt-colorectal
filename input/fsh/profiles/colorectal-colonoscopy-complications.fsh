@@ -48,11 +48,10 @@ Description: "Complications that may occur after diagnostic colonoscopy."
 
 * $sct#95540002 "Hemorrhage of colon (disorder)"
 * $sct#33211000 "Complication of anesthesia (disorder)"
-* $sct#976220 "Colonoscopic control of colon bleeding (procedure)" //will be added in newer SCT version
 * $sct#269304002 "Accidental organ perforation during a procedure (disorder)"
 * $sct#303078007 "Perforation of large intestine (disorder)"
 
-
+/*
 ValueSet: ColonoscopyBleedingControlLtColorectal
 Id: colonoscopy-bleeding-control-lt-colorectal
 Title: "Colorectal - Diagnostic Colonoscopy Bleeding Control VS"
@@ -62,8 +61,8 @@ Description: "Methods used for colonoscopic bleeding control after diagnostic co
 * ^publisher = "HL7 Lithuania"
 
 * $sct#21147007 "Closure by clip (procedure)"
-* $sct#313191000 "Injection of epinephrine (procedure)"
-
+* $sct#313191000 "Injection of epinephrine (procedure)" //change to qualifier values?
+*/
 
 ValueSet: SydneyClassificationLtColorectal
 Id: sydney-classification-lt-colorectal
@@ -84,9 +83,9 @@ Description: "Actions taken after colon wall injury during diagnostic colonoscop
 * ^experimental = false
 * ^publisher = "HL7 Lithuania"
 
-* $sct#21147007 "Closure by clip (procedure)"
-* $sct#18557009 "Closure by suture (procedure)"
-* $sct#82874003 "Operation on colon (procedure)"
+* $sct#360017003 "Clipping - action (qualifier value)"
+* $sct#29684008 "Sutured (qualifier value)"
+* $sct#261424001 "Primary operation (qualifier value)"
 
 // Profiles
 
@@ -99,7 +98,7 @@ Description: "Profile for recording whether there was a complication after diagn
 * ^publisher = "HL7 Lithuania"
 
 * category = $observation-category#procedure "Procedure"
-* code = $sct#129656002 "Complication of diagnostic procedure (disorder)"
+* code = $sct#363103008 "Endocrine system complication of procedure (disorder)"
 * code MS
 
 * subject 1..1 MS
@@ -122,7 +121,7 @@ Description: "Profile for recording the complication type after diagnostic colon
 * ^publisher = "HL7 Lithuania"
 
 * category = $observation-category#procedure "Procedure"
-* code = $sct#129656002 "Complication of diagnostic procedure (disorder)"
+* code = $sct#363103008 "Endocrine system complication of procedure (disorder)"
 * code MS
 
 * subject 1..1 MS
@@ -135,7 +134,7 @@ Description: "Profile for recording the complication type after diagnostic colon
 * value[x] 1..1 MS
 * valueCodeableConcept from ColonoscopyComplicationTypeLtColorectal (required)
 
-
+/*
 Profile: ObservationDiagnosticColonoscopyBleedingControlLt
 Parent: LTBaseObservation
 Id: observation-diagnostic-colonoscopy-bleeding-control-lt
@@ -145,7 +144,7 @@ Description: "Profile for recording how colonoscopic bleeding control was perfor
 * ^publisher = "HL7 Lithuania"
 
 * category = $observation-category#procedure "Procedure"
-* code = $sct#976220 "Colonoscopic control of colon bleeding (procedure)"
+* code = $sct#976220 "Colonoscopic control of colon bleeding (procedure)" //will be added in newer SCT version
 * code MS
 
 * subject 1..1 MS
@@ -157,7 +156,7 @@ Description: "Profile for recording how colonoscopic bleeding control was perfor
 * value[x] only CodeableConcept
 * value[x] 1..1 MS
 * valueCodeableConcept from ColonoscopyBleedingControlLtColorectal (required)
-
+*/
 
 Profile: ObservationDiagnosticColonoscopyWallInjuryDetailLt
 Parent: LTBaseObservation
@@ -205,7 +204,7 @@ Title: "Observation: Colorectal - Diagnostic Colonoscopy Complication Presence N
 Description: "Example of an observation recording that no complication occurred after diagnostic colonoscopy."
 * status = #final
 * category = $observation-category#procedure "Procedure"
-* code = $sct#129656002 "Complication of diagnostic procedure (disorder)"
+* code = $sct#363103008 "Endocrine system complication of procedure (disorder)"
 * subject = Reference(example-patient-male)
 * performer = Reference(example-practitioner)
 * effectiveDateTime = "2026-03-12"
@@ -219,7 +218,7 @@ Title: "Observation: Colorectal - Diagnostic Colonoscopy Complication Presence Y
 Description: "Example of an observation recording that a complication occurred after diagnostic colonoscopy."
 * status = #final
 * category = $observation-category#procedure "Procedure"
-* code = $sct#129656002 "Complication of diagnostic procedure (disorder)"
+* code = $sct#363103008 "Endocrine system complication of procedure (disorder)"
 * subject = Reference(example-patient-male)
 * performer = Reference(example-practitioner)
 * effectiveDateTime = "2026-03-12"
@@ -235,7 +234,7 @@ Title: "Observation: Colorectal - Hemorrhage After Diagnostic Colonoscopy Exampl
 Description: "Example of an observation recording hemorrhage of colon after diagnostic colonoscopy."
 * status = #final
 * category = $observation-category#procedure "Procedure"
-* code = $sct#129656002 "Complication of diagnostic procedure (disorder)"
+* code = $sct#363103008 "Endocrine system complication of procedure (disorder)"
 * subject = Reference(example-patient-male)
 * performer = Reference(example-practitioner)
 * effectiveDateTime = "2026-03-12"
@@ -249,25 +248,11 @@ Title: "Observation: Colorectal - Anesthesia Complication After Diagnostic Colon
 Description: "Example of an observation recording complication of anesthesia after diagnostic colonoscopy."
 * status = #final
 * category = $observation-category#procedure "Procedure"
-* code = $sct#129656002 "Complication of diagnostic procedure (disorder)"
+* code = $sct#363103008 "Endocrine system complication of procedure (disorder)"
 * subject = Reference(example-patient-male)
 * performer = Reference(example-practitioner)
 * effectiveDateTime = "2026-03-12"
 * valueCodeableConcept = $sct#33211000 "Complication of anesthesia (disorder)"
-
-
-Instance: obs-dc-comp-bleedctrl-ex
-InstanceOf: ObservationDiagnosticColonoscopyComplicationTypeLt
-Usage: #example
-Title: "Observation: Colorectal - Colonoscopic Control of Colon Bleeding Example"
-Description: "Example of an observation recording colonoscopic control of colon bleeding after diagnostic colonoscopy."
-* status = #final
-* category = $observation-category#procedure "Procedure"
-* code = $sct#129656002 "Complication of diagnostic procedure (disorder)"
-* subject = Reference(example-patient-male)
-* performer = Reference(example-practitioner)
-* effectiveDateTime = "2026-03-12"
-* valueCodeableConcept = $sct#976220 "Colonoscopic control of colon bleeding (procedure)"
 
 
 Instance: obs-dc-comp-perf-proc-ex
@@ -277,7 +262,7 @@ Title: "Observation: Colorectal - Accidental Organ Perforation During Procedure 
 Description: "Example of an observation recording accidental organ perforation during a procedure after diagnostic colonoscopy."
 * status = #final
 * category = $observation-category#procedure "Procedure"
-* code = $sct#129656002 "Complication of diagnostic procedure (disorder)"
+* code = $sct#363103008 "Endocrine system complication of procedure (disorder)"
 * subject = Reference(example-patient-male)
 * performer = Reference(example-practitioner)
 * effectiveDateTime = "2026-03-12"
@@ -291,44 +276,48 @@ Title: "Observation: Colorectal - Perforation of Large Intestine Example"
 Description: "Example of an observation recording perforation of large intestine after diagnostic colonoscopy."
 * status = #final
 * category = $observation-category#procedure "Procedure"
-* code = $sct#129656002 "Complication of diagnostic procedure (disorder)"
+* code = $sct#363103008 "Endocrine system complication of procedure (disorder)"
 * subject = Reference(example-patient-male)
 * performer = Reference(example-practitioner)
 * effectiveDateTime = "2026-03-12"
 * valueCodeableConcept = $sct#303078007 "Perforation of large intestine (disorder)"
 
 
-// Examples - Bleeding Control Detail
-
-Instance: obs-dc-bleed-clip-ex
-InstanceOf: ObservationDiagnosticColonoscopyBleedingControlLt
+// Examples - Bleeding Control Detail (procedure)
+Instance: procedure-colorectal-colon-bleeding-ex
+InstanceOf: Procedure
 Usage: #example
-Title: "Observation: Colorectal - Bleeding Control by Clip Example"
-Description: "Example showing closure by clip as the method used for colonoscopic bleeding control."
-* status = #final
-* category = $observation-category#procedure "Procedure"
+Title: "Procedure: Colorectal - Colonoscopic control of colon bleeding Example"
+Description: "Example of colonoscopic control of colon bleeding."
+* status = #completed
 * code = $sct#976220 "Colonoscopic control of colon bleeding (procedure)"
 * subject = Reference(example-patient-male)
-* performer = Reference(example-practitioner)
-* effectiveDateTime = "2026-03-12"
-* valueCodeableConcept = $sct#21147007 "Closure by clip (procedure)"
+* occurrenceDateTime = "2026-02-26"
 
-
-Instance: obs-dc-bleed-epi-ex
-InstanceOf: ObservationDiagnosticColonoscopyBleedingControlLt
+Instance: procedure-colorectal-bleed-clip-ex
+InstanceOf: Procedure
 Usage: #example
-Title: "Observation: Colorectal - Bleeding Control by Epinephrine Example"
-Description: "Example showing injection of epinephrine as the method used for colonoscopic bleeding control."
-* status = #final
-* category = $observation-category#procedure "Procedure"
-* code = $sct#976220 "Colonoscopic control of colon bleeding (procedure)"
+Title: "Procedure: Colorectal - Bleeding Control by Clip Example"
+Description: "Example showing closure by clip under the reason of bleeding control."
+* status = #completed
+* code = $sct#21147007 "Closure by clip (procedure)"
 * subject = Reference(example-patient-male)
-* performer = Reference(example-practitioner)
-* effectiveDateTime = "2026-03-12"
-* valueCodeableConcept = $sct#313191000 "Injection of epinephrine (procedure)"
+* occurrenceDateTime = "2026-02-26"
+* reason.concept = $sct#976220 "Colonoscopic control of colon bleeding (procedure)"
+
+Instance: procedure-colorectal-bleed-epi-ex
+InstanceOf: Procedure
+Usage: #example
+Title: "Procedure: Colorectal - Bleeding Control by Epinephrine Example"
+Description: "Example showing injection of epinephrine under reason of bleeding control."
+* status = #completed
+* code = $sct#313191000 "Injection of epinephrine (procedure)"
+* subject = Reference(example-patient-male)
+* occurrenceDateTime = "2026-02-26"
+* reason.concept = $sct#976220 "Colonoscopic control of colon bleeding (procedure)"
 
 
-// Examples - Wall Injury Detail
+// Examples - Wall Injury Detail (qualifier value)
 
 Instance: obs-dc-wallinj-clip-t3-ex
 InstanceOf: ObservationDiagnosticColonoscopyWallInjuryDetailLt
@@ -344,7 +333,7 @@ Description: "Example showing Sydney classification type 3 and closure by clip a
 * component[sydneyClassification].code = $sct#303078007 "Perforation of large intestine (disorder)"
 * component[sydneyClassification].valueCodeableConcept = SydneyClassificationCsLtColorectal#type-3 "Sydney DMI Type III"
 * component[actionTaken].code = $sct#129271007 "Management - action (qualifier value)"
-* component[actionTaken].valueCodeableConcept = $sct#21147007 "Closure by clip (procedure)"
+* component[actionTaken].valueCodeableConcept = $sct#360017003 "Clipping - action (qualifier value)"
 
 Instance: obs-dc-wallinj-suture-t4-ex
 InstanceOf: ObservationDiagnosticColonoscopyWallInjuryDetailLt
@@ -360,7 +349,7 @@ Description: "Example showing Sydney classification type 4 and closure by suture
 * component[sydneyClassification].code = $sct#303078007 "Perforation of large intestine (disorder)"
 * component[sydneyClassification].valueCodeableConcept = SydneyClassificationCsLtColorectal#type-4 "Sydney DMI Type IV"
 * component[actionTaken].code = $sct#129271007 "Management - action (qualifier value)"
-* component[actionTaken].valueCodeableConcept = $sct#18557009 "Closure by suture (procedure)"
+* component[actionTaken].valueCodeableConcept = $sct#29684008 "Sutured (qualifier value)"
 
 
 Instance: obs-dc-wallinj-op-t5-ex
@@ -377,4 +366,4 @@ Description: "Example showing Sydney classification type 5 and operation on colo
 * component[sydneyClassification].code = $sct#303078007 "Perforation of large intestine (disorder)"
 * component[sydneyClassification].valueCodeableConcept = SydneyClassificationCsLtColorectal#type-5 "Sydney DMI Type V"
 * component[actionTaken].code = $sct#129271007 "Management - action (qualifier value)"
-* component[actionTaken].valueCodeableConcept = $sct#82874003 "Operation on colon (procedure)"
+* component[actionTaken].valueCodeableConcept = $sct#261424001 "Primary operation (qualifier value)"
