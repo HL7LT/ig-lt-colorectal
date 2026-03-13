@@ -34,7 +34,7 @@ Description: "Indicates whether there was a complication after diagnostic colono
 * ^experimental = false
 * ^publisher = "HL7 Lithuania"
 
-* $sct#260385009 "Negative (qualifier value)"
+* $sct#373067005 "No (qualifier value)"
 * $sct#373066001 "Yes (qualifier value)"
 
 
@@ -209,7 +209,7 @@ Description: "Example of an observation recording that no complication occurred 
 * subject = Reference(example-patient-male)
 * performer = Reference(example-practitioner)
 * effectiveDateTime = "2026-03-12"
-* valueCodeableConcept = $sct#260385009 "Negative (qualifier value)"
+* valueCodeableConcept = $sct#373067005 "No (qualifier value)"
 
 
 Instance: obs-dc-comp-pres-yes-ex
