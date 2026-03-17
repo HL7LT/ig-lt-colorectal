@@ -1,5 +1,5 @@
 Instance: observation-bbps-left-colon-example
-InstanceOf: LTBaseObservation
+InstanceOf: ObservationLt
 Usage: #example
 Title: "Observation: Colorectal - BBPS Left Colon (3 points)"
 Description: "Example of an observation recording an excellent (3 points) Boston scale score for the Left colon."
@@ -14,7 +14,7 @@ Description: "Example of an observation recording an excellent (3 points) Boston
 * valueCodeableConcept = $sct#10311000132100 "Entire mucosa of colon segment seen well with no residual staining, small fragments of stool or opaque liquid (finding)"
 
 Instance: observation-bbps-transverse-colon-example
-InstanceOf: LTBaseObservation
+InstanceOf: ObservationLt
 Usage: #example
 Title: "Observation: Colorectal - BBPS Transverse Colon (2 points)"
 Description: "Example of an observation recording a good (2 points) Boston scale score for the Transverse colon."
@@ -29,7 +29,7 @@ Description: "Example of an observation recording a good (2 points) Boston scale
 * valueCodeableConcept = $sct#10301000132102 "Minor amount of residual staining, small fragments of stool and/or opaque liquid, but mucosa of colon segment seen well (finding)"
 
 Instance: observation-bowel-prep-total-effective-example
-InstanceOf: LTBaseObservation
+InstanceOf: ObservationLt
 Usage: #example
 Title: "Observation: Colorectal - Bowel Prep Quality & Total Score (Effective)"
 Description: "Example of a single observation recording both the overall Effective quality and the Total Boston Scale score."
@@ -44,7 +44,7 @@ Description: "Example of a single observation recording both the overall Effecti
 * component[0].valueInteger = 5
 
 Instance: observation-bowel-prep-total-inadequate-example
-InstanceOf: LTBaseObservation
+InstanceOf: ObservationLt
 Usage: #example
 Title: "Observation: Colorectal - Bowel Prep Quality & Total Score (Inadequate)"
 Description: "Example of a single observation recording both the overall Inadequate quality and the Total Boston Scale score."
@@ -59,7 +59,7 @@ Description: "Example of a single observation recording both the overall Inadequ
 * component[0].valueInteger = 2
 
 Instance: observation-bowel-prep-not-done-example
-InstanceOf: LTBaseObservation
+InstanceOf: ObservationLt
 Usage: #example
 Title: "Observation: Colorectal - Bowel Prep Quality (Not Done)"
 Description: "Example of an observation recording that the bowel preparation was not done (no Boston scale score applicable)."
