@@ -1,7 +1,7 @@
-Instance: example-practitioner
-InstanceOf: LTBasePractitioner
+Instance: practitioner-example
+InstanceOf: PractitionerLt
 Usage: #example
-Title: "Dr. Petras Kazlauskas - LT Base Practitioner Example"
+Title: "Practitioner: Dr. Petras Kazlauskas (example)"
 Description: "An example Practitioner conforming to the Lithuanian Base Profile."
 // Identifier (Mandatory by the profile)
 * identifier[0].use = #official
@@ -26,4 +26,3 @@ Description: "An example Practitioner conforming to the Lithuanian Base Profile.
 * telecom[1].use = #work
 * gender = #male
 * birthDate = "1975-05-15"
-

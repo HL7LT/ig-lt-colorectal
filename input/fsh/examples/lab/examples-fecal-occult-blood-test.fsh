@@ -1,72 +1,46 @@
-ValueSet: FecalOccultBloodTestCodesLtColorectal
-Id: fecal-occult-blood-test-codes-lt-colorectal
-Title: "Colorectal - Fecal Occult Blood Test VS"
-Description: "LOINC codes for fecal occult blood (hemoglobin) testing."
-* ^status = #active
-* ^experimental = false
-* ^publisher = "HL7 Lithuania"
-
-* $loinc#80372-6 "Hemoglobin [Presence] in Stool from gastrointestinal by Rapid immunoassay"
-* $loinc#27396-1 "Hemoglobin [Mass/mass] in Stool from gastrointestinal"
-
-ValueSet: FecalOccultBloodQualitativeResultLtColorectal
-Id: fecal-occult-blood-qualitative-result-lt-colorectal
-Title: "Colorectal - FOBT Qualitative Result VS"
-Description: "Qualitative result values for fecal occult blood testing."
-* ^status = #active
-* ^experimental = false
-* ^publisher = "HL7 Lithuania"
-
-* $sct#260373001 "Detected (qualifier value)"
-* $sct#260415000 "Not detected (qualifier value)"
-
-// Example Specimen (stool)
-Instance: specimen-colorectal-fobt-example
+Instance: specimen-stool-fobt-example
 InstanceOf: Specimen
 Usage: #example
-Title: "Specimen: Colorectal - Stool Specimen Example"
+Title: "Specimen: Stool for FOBT (example)"
 Description: "Example of a stool specimen used for fecal occult blood testing."
 * status = #available
 * type = $sct#119339001 "Stool specimen"
 
-// Examples
-Instance: observation-colorectal-fobt-qualitative-not-detected-example
-InstanceOf: LTBaseObservation
+Instance: observation-fobt-qualitative-not-detected-example
+InstanceOf: ObservationLt
 Usage: #example
-Title: "Observation: Colorectal - FOBT Qualitative Not Detected Example"
+Title: "Observation: FOBT Qualitative Not Detected (example)"
 Description: "Example of a qualitative fecal occult blood test result with 'Not detected' value."
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
 * code = $loinc#80372-6 "Hemoglobin.gastrointestinal [Presence] in Stool by Rapid immunoassay"
-* subject = Reference(example-patient-male)
+* subject = Reference(patient-male-example)
 * effectiveDateTime = "2026-02-26"
-* specimen = Reference(specimen-colorectal-fobt-example)
+* specimen = Reference(specimen-stool-fobt-example)
 * valueCodeableConcept = $sct#260415000 "Not detected (qualifier value)"
 
-
-Instance: observation-colorectal-fobt-qualitative-detected-example
-InstanceOf: LTBaseObservation
+Instance: observation-fobt-qualitative-detected-example
+InstanceOf: ObservationLt
 Usage: #example
-Title: "Observation: Colorectal - FOBT Qualitative Detected Example"
+Title: "Observation: FOBT Qualitative Detected (example)"
 Description: "Example of a qualitative fecal occult blood test result with 'Detected' value."
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
 * code = $loinc#80372-6 "Hemoglobin.gastrointestinal [Presence] in Stool by Rapid immunoassay"
-* subject = Reference(example-patient-male)
+* subject = Reference(patient-male-example)
 * effectiveDateTime = "2026-02-26"
-* specimen = Reference(specimen-colorectal-fobt-example)
+* specimen = Reference(specimen-stool-fobt-example)
 * valueCodeableConcept = $sct#260373001 "Detected (qualifier value)"
 
-
-Instance: observation-colorectal-fobt-quantitative-example
-InstanceOf: LTBaseObservation
+Instance: observation-fobt-quantitative-example
+InstanceOf: ObservationLt
 Usage: #example
-Title: "Observation: Colorectal - FOBT Quantitative Example"
+Title: "Observation: FOBT Quantitative (example)"
 Description: "Example of a quantitative fecal occult blood test result."
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
 * code = $loinc#27396-1 "Hemoglobin.gastrointestinal [Mass/mass] in Stool"
-* subject = Reference(example-patient-male)
+* subject = Reference(patient-male-example)
 * effectiveDateTime = "2026-02-26"
-* specimen = Reference(specimen-colorectal-fobt-example)
+* specimen = Reference(specimen-stool-fobt-example)
 * valueQuantity = 12.3 'ug/L' "µg/L"

@@ -1,7 +1,7 @@
-Instance: example-patient-male
-InstanceOf: LTBasePatient 
+Instance: patient-male-example
+InstanceOf: PatientLt
 Usage: #example
-Title: "Example of Patient - Jonas Petrauskas"
+Title: "Patient: Jonas Petrauskas (example)"
 Description: "An example Patient conforming to the Lithuanian Base Profile."
 // Identifiers (Required: 1..* MS)
 * identifier[0].use = #official
@@ -10,7 +10,7 @@ Description: "An example Patient conforming to the Lithuanian Base Profile."
 * identifier[1].use = #usual
 * identifier[1].system = "http://hospital-lt.lt/patient-id"
 * identifier[1].value = "HOSPLT-10005"
-// Name 
+// Name
 * name[0].use = #official
 * name[0].family = "Petrauskas"
 * name[0].given[0] = "Jonas"
