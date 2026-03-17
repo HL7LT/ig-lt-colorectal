@@ -20,7 +20,7 @@ Title: "Observation: Colorectal - BBPS Transverse Colon (2 points)"
 Description: "Example of an observation recording a good (2 points) Boston scale score for the Transverse colon."
 * status = #final
 * category = $observation-category#exam "Exam"
-* code = $sct#722819004 "Boston bowel preparation scale finding (finding)"
+* code = $sct#722819004 "Boston bowel preparation scale finding (finding)" //Boston bowel preparation scale (assessment scale) 722818007
 * subject = Reference(patient-male-example)
 * performer = Reference(practitioner-example)
 * effectiveDateTime = "2026-02-26"
@@ -41,7 +41,7 @@ Description: "Example of a single observation recording both the overall Effecti
 * effectiveDateTime = "2026-02-26"
 * valueCodeableConcept = $sct#703141002 "Effective bowel preparation for procedure (finding)"
 * component[0].code = $sct#722819004 "Boston bowel preparation scale finding (finding)"
-* component[0].valueInteger = 5
+* component[0].valueInteger = 6
 
 Instance: observation-bowel-prep-total-inadequate-example
 InstanceOf: ObservationLt
