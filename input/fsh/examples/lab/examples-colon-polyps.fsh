@@ -63,12 +63,12 @@ Description: "Example recording the removal of a polyp using a cold snare, en bl
 // The main action code: Colonic polypectomy
 * code = $sct#274025005 "Colonic polypectomy (procedure)"
 * subject = Reference(patient-male-example)
-* performedDateTime = "2026-02-26"
-* reasonReference = Reference(observation-polyp-found-example)
+* occurrenceDateTime = "2026-02-26"
+* reason.reference = Reference(observation-polyp-found-example)
 // Technique: En Bloc
 * bodySite.text = "En bloc removal"
 // Equipment used: Cold snare device
-* usedCode[0] = $sct#413268009 "Cold snare, device (physical object)"
+* used[0].concept = $sct#413268009 "Cold snare, device (physical object)"
 // Hydropreparation used: Adrenaline
-* usedCode[1].text = "Hydropreparation using Adrenaline"
+* used[1].concept.text = "Hydropreparation using Adrenaline"
 * note[0].text = "Histological examination: Sent. Sample number 98765-B."

@@ -21,10 +21,11 @@ publisher:
   email: info@medicinosnk.lt
 
 dependencies:
-  lt.hl7.fhir.base: 0.3.0
+  lt.hl7.fhir.base: current
+  lt.hl7.fhir.lifestyle: current
+  lt.hl7.fhir.vitalsigns: current
   lt.hl7.fhir.eu: 0.0.2
   hl7.fhir.eu.base-r5: 0.1.0
-
 
 # The pages property corresponds to IG.definition.page. SUSHI can
 # auto-generate the page list, but if the author includes pages in
@@ -59,6 +60,10 @@ dependencies:
 pages:
   index.md:
     title: Home
+  workflow.md:
+    title: Workflow
+  questionnaire.md:
+    title: Questionnaires
 
 
 parameters:
@@ -93,6 +98,8 @@ parameters:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
+  Workflow: workflow.html
+  Questionnaires: questionnaire.html
   Artifacts: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮

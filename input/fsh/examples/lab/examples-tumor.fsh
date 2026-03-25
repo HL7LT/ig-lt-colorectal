@@ -57,6 +57,6 @@ Description: "Example recording that the biopsy of the discovered tumor was post
 * status = #not-done 
 * code = $sct#80050006 "Endoscopic biopsy of large intestine (procedure)"
 * subject = Reference(patient-male-example)
-* performedDateTime = "2026-02-26"
-* reasonReference = Reference(observation-tumor-found-example)
+* occurrenceDateTime = "2026-02-26"
+* reason.reference = Reference(observation-tumor-found-example)
 * statusReason.text = "Tumor biopsy postponed due to risk of excessive bleeding."
