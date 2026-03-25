@@ -18,6 +18,9 @@ Description: "SNOMED CT codes representing the final diagnostic conclusions of t
 * $sct#413245000 "Bleeding of unknown origin (finding)"
 * $sct#254589009 "Intestinal polyposis syndrome (disorder)"
 
+//update workflow about what VS is used for conclusion, also separate the VS and instances in appropriate folders
+
+
 Instance: observation-conclusion-normal-example
 InstanceOf: ObservationLt
 Usage: #example

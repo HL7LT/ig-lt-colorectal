@@ -16,7 +16,7 @@ Description: "Shared SNOMED CT codes representing the anatomical segments of the
 * $sct#60184004 "Sigmoid colon structure (body structure)"
 * $sct#34402009 "Rectum structure (body structure)"
 
-//
+//use an international yes no VS
 ValueSet: YesNoLtColorectal
 Id: yes-no-lt-colorectal
 Title: "Colorectal - Yes/No VS"
@@ -28,6 +28,8 @@ Description: "Standard Yes/No qualifier values for the Colorectal screening prog
 * $sct#373066001 "Yes (qualifier value)"
 * $sct#373067005 "No (qualifier value)"
 
+
+// review intersection with patology IG
 Instance: observation-tumor-found-example
 InstanceOf: ObservationLt
 Usage: #example
@@ -41,6 +43,8 @@ Description: "Example recording the presence of a tumor, including its location 
 * effectiveDateTime = "2026-02-26"
 * valueCodeableConcept = $sct#373066001 "Yes (qualifier value)"
 * bodySite = $sct#60184004 "Sigmoid colon structure (body structure)"
+
+// to differ which text field is local or private or description
 * note[0].text = "Local notes: Tumor appears highly vascularized."
 * note[1].text = "Description: Large mass obstructing approx 40% of the lumen."
 
