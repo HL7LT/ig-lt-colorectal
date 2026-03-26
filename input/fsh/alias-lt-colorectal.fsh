@@ -20,3 +20,4 @@ Alias: $colonoscope-reach-lt-colorectal-url = https://tx.hl7.lt/fhir/ValueSet/co
 Alias: $fecal-occult-blood-test-codes-lt-colorectal-url = https://tx.hl7.lt/fhir/ValueSet/fecal-occult-blood-test-codes
 Alias: $fecal-occult-blood-qualitative-result-lt-colorectal-url = https://tx.hl7.lt/fhir/ValueSet/fecal-occult-blood-qualitative-result
 Alias: $bowel-preparation-quality-lt-colorectal-url = https://tx.hl7.lt/fhir/ValueSet/bowel-preparation-quality
+Alias: $yes-no-url = https://tx.hl7.lt/fhir/ValueSet/yes-no

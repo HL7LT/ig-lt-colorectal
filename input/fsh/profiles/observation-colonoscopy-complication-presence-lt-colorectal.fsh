@@ -19,4 +19,4 @@ Description: "Profile for recording whether there was a complication after diagn
 
 * value[x] only CodeableConcept
 * value[x] 1..1 MS
-* valueCodeableConcept from ColonoscopyComplicationPresenceLtColorectal (required)
+* valueCodeableConcept from $yes-no-url (required)
