@@ -7,6 +7,8 @@ Alias: $observation-colonoscopy-complication-presence-lt-colorectal-url = https:
 Alias: $observation-colonoscopy-complication-type-lt-colorectal-url = https://hl7.lt/fhir/colorectal/StructureDefinition/observation-colonoscopy-complication-type-lt-colorectal
 Alias: $observation-colonoscopy-wall-injury-detail-lt-colorectal-url = https://hl7.lt/fhir/colorectal/StructureDefinition/observation-colonoscopy-wall-injury-detail-lt-colorectal
 Alias: $observation-colonoscope-reach-lt-colorectal-url = https://hl7.lt/fhir/colorectal/StructureDefinition/observation-colonoscope-reach-lt-colorectal
+Alias: $fecal-occult-blood-test-report-lt-colorectal-url = https://hl7.lt/fhir/colorectal/StructureDefinition/fecal-occult-blood-test-report-lt-colorectal
+Alias: $observation-fecal-occult-blood-test-result-lt-colorectal-url = https://hl7.lt/fhir/colorectal/StructureDefinition/observation-fecal-occult-blood-test-result-lt-colorectal
 
 // Terminology - CodeSystems (path without -cs-lt-colorectal)
 Alias: $sydney-classification-cs-lt-colorectal-url = https://tx.hl7.lt/fhir/CodeSystem/sydney-classification

@@ -44,3 +44,17 @@ Description: "Example of a quantitative fecal occult blood test result."
 * effectiveDateTime = "2026-02-26"
 * specimen = Reference(specimen-stool-fobt-example)
 * valueQuantity = 12.3 'ug/L' "µg/L"
+
+Instance: diagnosticreport-fobt-qualitative-not-detected-example
+InstanceOf: FecalOccultBloodTestReportLtColorectal
+Usage: #example
+Title: "Diagnostic Report: FOBT Qualitative Not Detected (example)"
+Description: "Example of a diagnostic report for a qualitative fecal occult blood test with 'Not detected' result."
+* status = #final
+* subject = Reference(patient-male-example)
+* code = $loinc#80372-6 "Hemoglobin.gastrointestinal [Presence] in Stool by Rapid immunoassay"
+* effectiveDateTime = "2026-02-26"
+* performer = Reference(practitioner-example)
+* specimen = Reference(specimen-stool-fobt-example)
+* result = Reference(observation-fobt-qualitative-not-detected-example)
+* conclusion = "No fecal occult blood detected."
