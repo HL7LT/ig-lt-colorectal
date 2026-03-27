@@ -111,7 +111,7 @@ Description: "Local codes for polyp classifications (Paris, NICE, Access, SMSA) 
 
 
 Instance: observation-polyp-found-example
-InstanceOf: ObservationPolypLtColorectal // <-- Pointing to the new Profile!
+InstanceOf: ObservationPolypLtColorectal
 Usage: #example
 Title: "Observation: Colorectal - Polyp Found (with SMSA & Details)"
 Description: "Example recording a colon polyp, properly mapped to the ColorectalPolypCodesLt CodeSystem."
