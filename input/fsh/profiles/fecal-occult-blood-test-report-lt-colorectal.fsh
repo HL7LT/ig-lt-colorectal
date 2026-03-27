@@ -27,7 +27,7 @@ Description: "Diagnostic report representing a fecal occult blood test examinati
 * specimen only Reference(Specimen)
 
 * result 1..1
-* result only Reference(ObservationLt)
+* result only Reference(ObservationFecalOccultBloodTestResultLtColorectal)
 
 * conclusion 0..1
 * conclusion ^short = "Short textual summary of the fecal occult blood test result"

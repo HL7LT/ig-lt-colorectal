@@ -119,6 +119,15 @@ Description: "ESPBI form for colonoscopy in the Lithuanian colorectal cancer scr
 * item[=].item[=].answerOption[+].valueCoding = $sct#373066001 "Yes"
 * item[=].item[=].answerOption[+].valueCoding = $sct#373067005 "No"
 
+* item[=].item[+].linkId = "bowelPrep.usedPreparations"
+* item[=].item[=].text = "Used preparations for bowel preparation"
+* item[=].item[=].type = #coding
+* item[=].item[=].repeats = true
+* item[=].item[=].answerOption[+].valueCoding = $sct#712567003 "Macrogol 4000 (substance)"
+* item[=].item[=].answerOption[+].valueCoding = $sct#712566007 "Macrogol 3350 (substance)"
+* item[=].item[=].answerOption[+].valueCoding = $sct#715699009 "Product containing citric acid and magnesium oxide and sodium picosulfate (medicinal product)"
+* item[=].item[=].answerOption[+].valueCoding = $sct#69958001 "Sodium sulfate (substance)"
+
 // ────────────────────────────────────────────────────────────────────────
 // Group 3: Colonoscope reach
 // ────────────────────────────────────────────────────────────────────────
