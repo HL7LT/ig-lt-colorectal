@@ -158,34 +158,6 @@ Description: "Example recording a colon polyp, properly mapped to the Colorectal
 * component[smsaLevel].valueCodeableConcept = ColorectalPolypCodesLt#smsa-lvl-3 "Level III (9-12 points)"
 
 /*
-Instance: procedure-polypectomy-example
-InstanceOf: Procedure
-Usage: #example
-Title: "Procedure: Colorectal - Polypectomy (Cold Snare, En Bloc, Adrenaline)"
-Description: "Example recording the removal of a polyp using a cold snare, en bloc technique, with adrenaline hydropreparation and air filling."
-* status = #completed
-* category = $sct#387713003 "Surgical procedure (procedure)"
-* code = $sct#274025005 "Colonic polypectomy (procedure)"
-* subject = Reference(patient-male-example)
-* occurrenceDateTime = "2026-02-26"
-* reason.reference = Reference(observation-polyp-found-example)
-
-// 1. Method: En Bloc
-* method.text = "En bloc"
-
-// 2. Lumen Filling: Air
-* used[0].concept = $sct#702173008 "Medical air (substance)"
-
-// 3. Equipment: Cold Snare
-* used[1].concept = $sct#413268009 "Cold snare, device (physical object)"
-
-// 4. Hydropreparation: Adrenaline
-* used[2].concept = $sct#387362001 "Adrenaline (substance)"
-
-// 5. Histology Status: Sent
-* report.display = "Histology requested" 
-*/
-/*
 CodeSystem: ColorectalPolypectomyCodesLt
 Id: colorectal-polypectomy-codes-lt
 Title: "Colorectal - Local Polypectomy Codes CS"
@@ -262,6 +234,14 @@ Title: "Colorectal - Polypectomy Histology Status VS"
 * ColorectalPolypectomyCodesLt#hist-sent
 * ColorectalPolypectomyCodesLt#hist-not-sent
 
+Extension: ProcedureMethod
+Id: procedure-method
+Title: "Procedure Method"
+Description: "The method or technique used to perform the procedure."
+* ^status = #active
+* ^publisher = "HL7 Lithuania"
+* value[x] only CodeableConcept
+
 Profile: ProcedurePolypectomyLtColorectal
 Parent: Procedure 
 Id: procedure-polypectomy-lt-colorectal
@@ -274,9 +254,9 @@ Description: "Profile enforcing the mandatory documentation of the polypectomy t
 * code = $sct#274025005 "Colonic polypectomy (procedure)"
 * subject 1..1 MS
 
-// 1. Excision Method (En Bloc vs Parts)
-* method 1..1 MS
-* method from PolypectomyExcisionMethodLtColorectal (required)
+// 1. Excision Method (En Bloc vs Parts) mapped via Extension
+* extension contains ProcedureMethod named method 1..1 MS
+* extension[method].valueCodeableConcept from PolypectomyExcisionMethodLtColorectal (required)
 
 // 2. Histology Outcome
 * outcome 1..1 MS
@@ -292,9 +272,9 @@ Description: "Profile enforcing the mandatory documentation of the polypectomy t
     instrument 1..1 MS and
     hydroprep 1..* MS
 
-* used[lumenFilling].concept from PolypectomyLumenFillingLtColorectal (required)
-* used[instrument].concept from PolypectomyInstrumentLtColorectal (required)
-* used[hydroprep].concept from PolypectomyHydroprepLtColorectal (required)
+* used[lumenFilling] from PolypectomyLumenFillingLtColorectal (required)
+* used[instrument] from PolypectomyInstrumentLtColorectal (required)
+* used[hydroprep] from PolypectomyHydroprepLtColorectal (required)
 
 Instance: procedure-polypectomy-example
 InstanceOf: ProcedurePolypectomyLtColorectal
@@ -307,11 +287,10 @@ Description: "Example recording the removal of a polyp perfectly conforming to t
 * subject = Reference(patient-male-example)
 * occurrenceDateTime = "2026-02-26"
 
-// Link back to the specific polyp Observation
 * reason.reference = Reference(observation-polyp-found-example)
 
-// 1. Method (En bloc)
-* method = ColorectalPolypectomyCodesLt#exc-en-bloc "En bloc"
+// 1. Method (En bloc) - Populated using the extension
+* extension[method].valueCodeableConcept = ColorectalPolypectomyCodesLt#exc-en-bloc "En bloc"
 
 // 2. Lumen Filling (Air)
 * used[lumenFilling].concept = ColorectalPolypectomyCodesLt#fill-air "Filling the space with air"
