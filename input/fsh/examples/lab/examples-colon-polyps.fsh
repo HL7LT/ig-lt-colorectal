@@ -185,7 +185,7 @@ Description: "Example recording the removal of a polyp using a cold snare, en bl
 // 5. Histology Status: Sent
 * report.display = "Histology requested" 
 */
-
+/*
 CodeSystem: ColorectalPolypectomyCodesLt
 Id: colorectal-polypectomy-codes-lt
 Title: "Colorectal - Local Polypectomy Codes CS"
@@ -324,3 +324,5 @@ Description: "Example recording the removal of a polyp perfectly conforming to t
 
 // 5. Histology Status (Sent) 
 * outcome = ColorectalPolypectomyCodesLt#hist-sent "Sent for histological examination"
+
+*/
