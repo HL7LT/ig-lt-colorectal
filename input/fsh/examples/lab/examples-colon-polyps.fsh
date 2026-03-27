@@ -184,5 +184,143 @@ Description: "Example recording the removal of a polyp using a cold snare, en bl
 
 // 5. Histology Status: Sent
 * report.display = "Histology requested" 
-
 */
+
+CodeSystem: ColorectalPolypectomyCodesLt
+Id: colorectal-polypectomy-codes-lt
+Title: "Colorectal - Local Polypectomy Codes CS"
+Description: "Local codes for polypectomy techniques, instruments, and hydropreparation used in the colorectal screening program."
+* ^status = #active
+* ^publisher = "HL7 Lithuania"
+* ^caseSensitive = true
+
+// Lumen Filling Options
+* #fill-air "Filling the space with air"
+* #fill-water "Filling the container with water"
+
+// Instrument & Energy Options
+* #inst-loop-hot "With a loop - Hot method"
+* #inst-loop-cold "With a loop - Cold method"
+* #inst-pliers "With pliers"
+
+// Excision Method Options
+* #exc-en-bloc "En bloc"
+* #exc-parts "Parts (Piecemeal)"
+
+// Hydropreparation Options
+* #hydro-pending "Hydropreparation pending (None)"
+* #hydro-phys-sol "Physiological solution"
+* #hydro-adrenaline "Adrenaline"
+* #hydro-meth-blue "Methylene blue"
+* #hydro-gelofusine "Gelofusine"
+
+// Histology Status
+* #hist-sent "Sent for histological examination"
+* #hist-not-sent "Not sent"
+
+ValueSet: PolypectomyLumenFillingLtColorectal
+Id: polypectomy-lumen-filling-lt-colorectal
+Title: "Colorectal - Polypectomy Lumen Filling VS"
+* ^status = #active
+* ^publisher = "HL7 Lithuania"
+* ColorectalPolypectomyCodesLt#fill-air
+* ColorectalPolypectomyCodesLt#fill-water
+
+ValueSet: PolypectomyInstrumentLtColorectal
+Id: polypectomy-instrument-lt-colorectal
+Title: "Colorectal - Polypectomy Instrument VS"
+* ^status = #active
+* ^publisher = "HL7 Lithuania"
+* ColorectalPolypectomyCodesLt#inst-loop-hot
+* ColorectalPolypectomyCodesLt#inst-loop-cold
+* ColorectalPolypectomyCodesLt#inst-pliers
+
+ValueSet: PolypectomyExcisionMethodLtColorectal
+Id: polypectomy-excision-method-lt-colorectal
+Title: "Colorectal - Polypectomy Excision Method VS"
+* ^status = #active
+* ^publisher = "HL7 Lithuania"
+* ColorectalPolypectomyCodesLt#exc-en-bloc
+* ColorectalPolypectomyCodesLt#exc-parts
+
+ValueSet: PolypectomyHydroprepLtColorectal
+Id: polypectomy-hydroprep-lt-colorectal
+Title: "Colorectal - Polypectomy Hydropreparation VS"
+* ^status = #active
+* ^publisher = "HL7 Lithuania"
+* ColorectalPolypectomyCodesLt#hydro-pending
+* ColorectalPolypectomyCodesLt#hydro-phys-sol
+* ColorectalPolypectomyCodesLt#hydro-adrenaline
+* ColorectalPolypectomyCodesLt#hydro-meth-blue
+* ColorectalPolypectomyCodesLt#hydro-gelofusine
+
+ValueSet: PolypectomyHistologyStatusLtColorectal
+Id: polypectomy-histology-status-lt-colorectal
+Title: "Colorectal - Polypectomy Histology Status VS"
+* ^status = #active
+* ^publisher = "HL7 Lithuania"
+* ColorectalPolypectomyCodesLt#hist-sent
+* ColorectalPolypectomyCodesLt#hist-not-sent
+
+Profile: ProcedurePolypectomyLtColorectal
+Parent: Procedure 
+Id: procedure-polypectomy-lt-colorectal
+Title: "Colonic Polypectomy Procedure (LT Colorectal)"
+Description: "Profile enforcing the mandatory documentation of the polypectomy technique, tools, and histology outcome using local codes."
+* ^status = #active
+* ^publisher = "HL7 Lithuania"
+
+* category = $sct#387713003 "Surgical procedure (procedure)"
+* code = $sct#274025005 "Colonic polypectomy (procedure)"
+* subject 1..1 MS
+
+// 1. Excision Method (En Bloc vs Parts)
+* method 1..1 MS
+* method from PolypectomyExcisionMethodLtColorectal (required)
+
+// 2. Histology Outcome
+* outcome 1..1 MS
+* outcome from PolypectomyHistologyStatusLtColorectal (required)
+
+// 3. Lumen Filling, Instrument, and Hydroprep
+* used ^slicing.discriminator.type = #value
+* used ^slicing.discriminator.path = "concept"
+* used ^slicing.rules = #open
+
+* used contains
+    lumenFilling 1..1 MS and
+    instrument 1..1 MS and
+    hydroprep 1..* MS
+
+* used[lumenFilling].concept from PolypectomyLumenFillingLtColorectal (required)
+* used[instrument].concept from PolypectomyInstrumentLtColorectal (required)
+* used[hydroprep].concept from PolypectomyHydroprepLtColorectal (required)
+
+Instance: procedure-polypectomy-example
+InstanceOf: ProcedurePolypectomyLtColorectal
+Usage: #example
+Title: "Procedure: Colorectal - Polypectomy (Cold Snare, En Bloc, Adrenaline)"
+Description: "Example recording the removal of a polyp perfectly conforming to the strict Polypectomy profile."
+* status = #completed
+* category = $sct#387713003 "Surgical procedure (procedure)"
+* code = $sct#274025005 "Colonic polypectomy (procedure)"
+* subject = Reference(patient-male-example)
+* occurrenceDateTime = "2026-02-26"
+
+// Link back to the specific polyp Observation
+* reason.reference = Reference(observation-polyp-found-example)
+
+// 1. Method (En bloc)
+* method = ColorectalPolypectomyCodesLt#exc-en-bloc "En bloc"
+
+// 2. Lumen Filling (Air)
+* used[lumenFilling].concept = ColorectalPolypectomyCodesLt#fill-air "Filling the space with air"
+
+// 3. Instrument / Energy (Cold Snare loop)
+* used[instrument].concept = ColorectalPolypectomyCodesLt#inst-loop-cold "With a loop - Cold method"
+
+// 4. Hydropreparation (Adrenaline)
+* used[hydroprep].concept = ColorectalPolypectomyCodesLt#hydro-adrenaline "Adrenaline"
+
+// 5. Histology Status (Sent) 
+* outcome = ColorectalPolypectomyCodesLt#hist-sent "Sent for histological examination"
