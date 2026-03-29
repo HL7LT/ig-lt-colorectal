@@ -172,7 +172,21 @@ The colorectal-specific [Histological Diagnosis](StructureDefinition-histologica
 
 ##### 3.4 Molecular Research
 
-Molecular testing for microsatellite instability (MSI), KRAS, NRAS, and BRAF V600E mutations is indicated for adenocarcinoma. These tests use KLTN codes (XLT00915-2, XLT00914-5) and are documented as separate observations. *TODO: dedicated molecular testing profiles will be added in a future version.*
+Molecular testing for microsatellite instability (MSI), KRAS, NRAS, and BRAF V600E mutations is indicated for adenocarcinoma. Each test is recorded as a separate [Molecular Test Result](StructureDefinition-molecular-test-result-lt-colorectal.html) observation.
+
+Test types (from [Molecular Test Type VS](ValueSet-molecular-test-type.html)):
+- **MSI** (KLTN XLT00915-2) -- microsatellite instability study
+- **KRAS** -- KRAS gene mutation analysis
+- **NRAS** -- NRAS gene mutation analysis
+- **BRAF V600E** (KLTN XLT00914-5) -- BRAF gene V600 variant study
+
+Results (from [Molecular Test Result VS](ValueSet-molecular-test-result.html)): Postponed, Detected mutation, Undefined mutation, or Set (MSI).
+
+**Examples**:
+- [MSI - Set](Observation-observation-msi-detected-example.html)
+- [KRAS - Detected mutation](Observation-observation-kras-detected-example.html)
+- [NRAS - Undefined mutation](Observation-observation-nras-not-detected-example.html)
+- [BRAF V600E - Postponed](Observation-observation-braf-postponed-example.html)
 
 ##### 3.5 Pathology Report
 

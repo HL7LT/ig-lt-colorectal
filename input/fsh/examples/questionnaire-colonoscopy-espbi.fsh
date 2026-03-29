@@ -31,7 +31,7 @@
 //                           -> ColonoscopyBleedingControlLtColorectal
 // Group 7 (conclusions)     -> ColonoscopyConclusionLtColorectal
 //   See: ColorectalConclusionVS
-// Group 8 (recommendations) -> TODO: CarePlan profile
+// Group 8 (recommendations) -> ScreeningCarePlanLtColorectal
 // Group 9 (signatures)      -> PractitionerLt (base)
 //
 // Report structure:

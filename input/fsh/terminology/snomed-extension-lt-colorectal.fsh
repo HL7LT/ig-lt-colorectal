@@ -78,6 +78,26 @@ Description: "Extension CodeSystem for concepts used in the Lithuanian colorecta
 * #mmrp-postponed "MMRP Postponed"
 * #mmrp-undefined "MMRP Undefined (MSS)"
 
+// Molecular test result values
+* #mol-postponed "Postponed"
+* #mol-postponed ^definition = "Molecular test has been postponed"
+* #mol-detected "Detected mutation"
+* #mol-detected ^definition = "Mutation has been detected"
+* #mol-not-detected "Undefined mutation"
+* #mol-not-detected ^definition = "No mutation detected / undefined"
+* #mol-set "Set (MSI)"
+* #mol-set ^definition = "MSI status has been established"
+
+// Molecular test type codes (KLTN-based)
+* #msi-test "MSI (Microsatellite instability study)"
+* #msi-test ^definition = "Microsatellite instability study. KLTN code: XLT00915-2"
+* #kras-test "KRAS mutation test"
+* #kras-test ^definition = "KRAS gene mutation analysis"
+* #nras-test "NRAS mutation test"
+* #nras-test ^definition = "NRAS gene mutation analysis"
+* #braf-v600e-test "BRAF V600E mutation test"
+* #braf-v600e-test ^definition = "Study of BRAF gene V600 variants. KLTN code: XLT00914-5"
+
 // Invasion depth
 * #haggitt-0 "Haggitt 0"
 * #haggitt-1 "Haggitt 1"

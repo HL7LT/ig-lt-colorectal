@@ -21,9 +21,11 @@ Alias: $colonoscopy-procedure-lt-colorectal-url = https://hl7.lt/fhir/colorectal
 Alias: $polypectomy-procedure-lt-colorectal-url = https://hl7.lt/fhir/colorectal/StructureDefinition/polypectomy-procedure-lt-colorectal
 Alias: $colonoscopy-bleeding-control-lt-colorectal-url = https://hl7.lt/fhir/colorectal/StructureDefinition/colonoscopy-bleeding-control-lt-colorectal
 
-// Profiles — Report & Composition
+// Profiles — Report, Composition & CarePlan
 Alias: $colonoscopy-report-lt-colorectal-url = https://hl7.lt/fhir/colorectal/StructureDefinition/colonoscopy-report-lt-colorectal
 Alias: $colonoscopy-composition-lt-colorectal-url = https://hl7.lt/fhir/colorectal/StructureDefinition/colonoscopy-composition-lt-colorectal
+Alias: $screening-careplan-lt-colorectal-url = https://hl7.lt/fhir/colorectal/StructureDefinition/screening-careplan-lt-colorectal
+Alias: $molecular-test-result-lt-colorectal-url = https://hl7.lt/fhir/colorectal/StructureDefinition/molecular-test-result-lt-colorectal
 
 // Terminology — CodeSystems
 Alias: $sydney-classification-cs-url = https://tx.hl7.lt/fhir/CodeSystem/sydney-classification
@@ -55,3 +57,5 @@ Alias: $tumor-budding-vs-url = https://tx.hl7.lt/fhir/ValueSet/tumor-budding
 Alias: $invasion-depth-vs-url = https://tx.hl7.lt/fhir/ValueSet/invasion-depth
 Alias: $mmrp-expression-vs-url = https://tx.hl7.lt/fhir/ValueSet/mmrp-expression
 Alias: $yes-no-url = https://tx.hl7.lt/fhir/ValueSet/yes-no
+Alias: $molecular-test-type-vs-url = https://tx.hl7.lt/fhir/ValueSet/molecular-test-type
+Alias: $molecular-test-result-vs-url = https://tx.hl7.lt/fhir/ValueSet/molecular-test-result

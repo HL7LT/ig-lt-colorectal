@@ -2,6 +2,7 @@ ValueSet: BbpsColonSegmentsVS
 Id: bbps-colon-segments
 Title: "BBPS Colon Segments"
 Description: "SNOMED CT codes representing the three segments of the colon evaluated in the Boston Bowel Preparation Scale."
+* ^url = $bbps-colon-segments-vs-url
 * ^status = #active
 * ^experimental = false
 * ^publisher = "HL7 Lithuania"
