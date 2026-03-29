@@ -1,9 +1,9 @@
-Profile: ObservationDiagnosticColonoscopyComplicationTypeLtColorectal
+Profile: ColonoscopyComplicationTypeLtColorectal
 Parent: ObservationLt
-Id: observation-colonoscopy-complication-type-lt-colorectal
-Title: "Diagnostic Colonoscopy Complication Type Observation (LT Colorectal)"
+Id: colonoscopy-complication-type-lt-colorectal
+Title: "Colonoscopy Complication Type (LT Colorectal)"
 Description: "Profile for recording the complication type after diagnostic colonoscopy. This observation is recorded only if complication presence is Yes."
-* ^url = $observation-colonoscopy-complication-type-lt-colorectal-url
+* ^url = $colonoscopy-complication-type-lt-colorectal-url
 * ^status = #active
 * ^publisher = "HL7 Lithuania"
 
@@ -19,4 +19,4 @@ Description: "Profile for recording the complication type after diagnostic colon
 
 * value[x] only CodeableConcept
 * value[x] 1..1 MS
-* valueCodeableConcept from ColonoscopyComplicationTypeLtColorectal (required)
+* valueCodeableConcept from ColonoscopyComplicationTypeVS (required)

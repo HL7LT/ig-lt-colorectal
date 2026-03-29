@@ -1,30 +1,48 @@
 // ══════════════════════════════════════════════════════════════════════════
-// Narrative mapping -- Questionnaire items -> FHIR profiles/examples
+// Narrative mapping -- Questionnaire items -> FHIR profiles
 // ══════════════════════════════════════════════════════════════════════════
-// Group 1 (basicInfo)       -> Patient (PatientLt), Encounter
-// Group 2 (bowelPrep)       -> Observation (BowelPreparationQuality examples)
-//   bbpsScoring             -> Observation (Boston Bowel Prep Scale examples)
+// Group 1 (basicInfo)       -> ColonoscopyProcedureLtColorectal (procedure)
+//                           -> PatientLt, EncounterLt
+// Group 2 (bowelPrep)       -> BowelPreparationQualityLtColorectal (BBPS)
+//   bbpsScoring             -> BowelPreparationQualityLtColorectal components
 //   dietaryRecommendations  -> Observation (dietary-recommendations examples)
 //   splitDose               -> Observation (split-dose examples)
 //   writtenInfo             -> Observation (written-information examples)
-// Group 3 (scopeReach)      -> ObservationColonoscopeReachLtColorectal
-//   See: ColonoscopeReachLtColorectalVS
-// Group 4 (polypFindings)   -> Observation (colon-polyps examples)
-//   location               -> ColorectalAnatomyLtColorectalVS
-//   Paris classification   -> Paris endoscopic classification
-//   NICE classification    -> NICE classification (Type I-III)
-//   SMSA score             -> SMSA polypectomy difficulty
-//   predicted histology    -> hyperplastic, SSL, adenoma
-// Group 5 (tumorFindings)   -> Observation (tumor examples)
-// Group 6 (complications)   -> ObservationColonoscopyComplicationPresenceLtColorectal
-//                           -> ObservationColonoscopyComplicationTypeLtColorectal
-//                           -> ObservationColonoscopyWallInjuryDetailLtColorectal
-// Group 7 (conclusions)     -> Observation (conclusions examples)
-// Group 8 (recommendations) -> CarePlan / text
-// Group 9 (signatures)      -> Practitioner
-// See also:
+//   preparations            -> BowelPreparationSubstanceVS
+// Group 3 (scopeReach)      -> ColonoscopeReachLtColorectal
+//   See: ColonoscopeReachVS
+// Group 4 (polypFindings)   -> PolypFindingLtColorectal
+//   location               -> ColorectalAnatomyVS (bodySite)
+//   Paris classification   -> ParisClassificationVS (component)
+//   NICE classification    -> NiceClassificationVS (component)
+//   size                   -> component[size] (mm)
+//   access                 -> PolypAccessVS (component)
+//   SMSA score             -> component[smsaScore] (calculated)
+//   predicted histology    -> PolypPredictedHistologyVS (component)
+//   actions                -> PolypectomyProcedureLtColorectal (hasMember)
+//   biopsy                 -> BiopsyProcedureLtLab (hasMember)
+//   histological exam      -> HistologicalDiagnosisLtColorectal (hasMember)
+//   photos                 -> Media/DocumentReference (derivedFrom)
+// Group 5 (tumorFindings)   -> TumorFindingLtColorectal
+//   biopsy                 -> BiopsyProcedureLtLab (hasMember)
+// Group 6 (complications)   -> ColonoscopyComplicationPresenceLtColorectal
+//                           -> ColonoscopyComplicationTypeLtColorectal
+//                           -> ColonoscopyWallInjuryDetailLtColorectal
+//                           -> ColonoscopyBleedingControlLtColorectal
+// Group 7 (conclusions)     -> ColonoscopyConclusionLtColorectal
+//   See: ColorectalConclusionVS
+// Group 8 (recommendations) -> TODO: CarePlan profile
+// Group 9 (signatures)      -> PractitionerLt (base)
+//
+// Report structure:
+//   ColonoscopyReportLtColorectal -> ColonoscopyCompositionLtColorectal
+//   FOBT: FobtObservationLtColorectal (separate from colonoscopy)
+//   Pathology: PathologyReportLtLab, HistologicalDiagnosisLtColorectal
+//
+// Cross-IG references:
 //   https://build.fhir.org/ig/HL7LT/ig-lt-lifestyle/ (tobacco, nutrition)
 //   https://build.fhir.org/ig/HL7LT/ig-lt-vitalsigns/ (BMI, blood pressure)
+//   https://build.fhir.org/ig/HL7LT/ig-lt-lab/ (pathology, specimen, tumor)
 // ══════════════════════════════════════════════════════════════════════════
 
 Instance: questionnaire-colonoscopy-espbi

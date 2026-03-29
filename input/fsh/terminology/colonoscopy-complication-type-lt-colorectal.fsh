@@ -1,8 +1,8 @@
-ValueSet: ColonoscopyComplicationTypeLtColorectal
-Id: colonoscopy-complication-type-lt-colorectal
-Title: "Colorectal - Diagnostic Colonoscopy Complication Type VS"
+ValueSet: ColonoscopyComplicationTypeVS
+Id: colonoscopy-complication-type
+Title: "Colonoscopy Complication Type"
 Description: "Complications that may occur after diagnostic colonoscopy."
-* ^url = $colonoscopy-complication-type-lt-colorectal-url
+* ^url = $colonoscopy-complication-type-vs-url
 * ^status = #active
 * ^experimental = false
 * ^publisher = "HL7 Lithuania"

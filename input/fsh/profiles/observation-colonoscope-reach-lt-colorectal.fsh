@@ -1,9 +1,9 @@
-Profile: ObservationColonoscopeReachLtColorectal
+Profile: ColonoscopeReachLtColorectal
 Parent: ObservationLt
-Id: observation-colonoscope-reach-lt-colorectal
-Title: "Colonoscope Reach (Inspected Until) Observation (LT Colorectal)"
+Id: colonoscope-reach-lt-colorectal
+Title: "Colonoscope Reach (LT Colorectal)"
 Description: "Profile for recording how far the colonoscope reached during a colorectal cancer screening program. Used to calculate the Cecum intubation rate."
-* ^url = $observation-colonoscope-reach-lt-colorectal-url
+* ^url = $colonoscope-reach-lt-colorectal-url
 * ^status = #active
 * ^publisher = "HL7 Lithuania"
 * category = $observation-category#procedure "Procedure"
@@ -13,4 +13,4 @@ Description: "Profile for recording how far the colonoscope reached during a col
 * subject only Reference(PatientLt)
 * value[x] only CodeableConcept
 * value[x] 1..1 MS
-* valueCodeableConcept from ColonoscopeReachLtColorectal (required)
+* valueCodeableConcept from ColonoscopeReachVS (required)

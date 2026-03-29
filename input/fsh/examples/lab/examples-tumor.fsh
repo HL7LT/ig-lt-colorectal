@@ -1,5 +1,5 @@
-ValueSet: ColorectalAnatomyLtColorectal
-Id: colorectal-anatomy-lt-colorectal
+ValueSet: ColorectalAnatomyVS
+Id: colorectal-anatomy
 Title: "Colorectal - Shared Anatomy VS"
 Description: "Shared SNOMED CT codes representing the anatomical segments of the colon and rectum. Used for recording locations of tumors, polyps, and colonoscope reach."
 * ^status = #active
@@ -17,8 +17,8 @@ Description: "Shared SNOMED CT codes representing the anatomical segments of the
 * $sct#34402009 "Rectum structure (body structure)"
 
 //use an international yes no VS
-ValueSet: YesNoLtColorectal
-Id: yes-no-lt-colorectal
+ValueSet: YesNoVS
+Id: yes-no
 Title: "Colorectal - Yes/No VS"
 Description: "Standard Yes/No qualifier values for the Colorectal screening program."
 * ^status = #active

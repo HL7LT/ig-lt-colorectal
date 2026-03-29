@@ -1,8 +1,8 @@
-ValueSet: FecalOccultBloodQualitativeResultLtColorectal
-Id: fecal-occult-blood-qualitative-result-lt-colorectal
-Title: "Colorectal - FOBT Qualitative Result VS"
+ValueSet: FecalOccultBloodQualitativeResultVS
+Id: fecal-occult-blood-qualitative-result
+Title: "FOBT Qualitative Result"
 Description: "Qualitative result values for fecal occult blood testing."
-* ^url = $fecal-occult-blood-qualitative-result-lt-colorectal-url
+* ^url = $fecal-occult-blood-qualitative-result-vs-url
 * ^status = #active
 * ^experimental = false
 * ^publisher = "HL7 Lithuania"

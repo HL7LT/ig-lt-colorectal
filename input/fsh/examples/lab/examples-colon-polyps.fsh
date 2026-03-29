@@ -1,5 +1,5 @@
-ValueSet: PolypPredictedHistologyLtColorectal
-Id: polyp-predicted-histology-lt-colorectal
+ValueSet: PolypPredictedHistologyVS
+Id: polyp-predicted-histology
 Title: "Colorectal - Polyp Predicted Histology VS"
 Description: "Endoscopic prediction of polyp histology using virtual chromoendoscopy."
 * ^status = #active

@@ -1,9 +1,9 @@
-Profile: ObservationDiagnosticColonoscopyWallInjuryDetailLtColorectal
+Profile: ColonoscopyWallInjuryDetailLtColorectal
 Parent: ObservationLt
-Id: observation-colonoscopy-wall-injury-detail-lt-colorectal
-Title: "Diagnostic Colonoscopy Wall Injury Detail Observation (LT Colorectal)"
+Id: colonoscopy-wall-injury-detail-lt-colorectal
+Title: "Colonoscopy Wall Injury Detail (LT Colorectal)"
 Description: "Profile for recording Sydney classification and action taken after colon wall injury during diagnostic colonoscopy. This observation is recorded only if accidental organ perforation during a procedure or perforation of large intestine was selected as the complication type."
-* ^url = $observation-colonoscopy-wall-injury-detail-lt-colorectal-url
+* ^url = $colonoscopy-wall-injury-detail-lt-colorectal-url
 * ^status = #active
 * ^publisher = "HL7 Lithuania"
 
@@ -28,9 +28,9 @@ Description: "Profile for recording Sydney classification and action taken after
 * component[sydneyClassification].code = $sct#303078007 "Perforation of large intestine (disorder)"
 * component[sydneyClassification].value[x] only CodeableConcept
 * component[sydneyClassification].value[x] 1..1 MS
-* component[sydneyClassification].valueCodeableConcept from SydneyClassificationLtColorectal (required)
+* component[sydneyClassification].valueCodeableConcept from SydneyClassificationVS (required)
 
 * component[actionTaken].code = $sct#129271007 "Management - action (qualifier value)"
 * component[actionTaken].value[x] only CodeableConcept
 * component[actionTaken].value[x] 1..1 MS
-* component[actionTaken].valueCodeableConcept from ColonoscopyWallInjuryActionLtColorectal (required)
+* component[actionTaken].valueCodeableConcept from ColonoscopyWallInjuryActionVS (required)

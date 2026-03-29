@@ -1,10 +1,10 @@
-ValueSet: SydneyClassificationLtColorectal
-Id: sydney-classification-lt-colorectal
-Title: "Colorectal - Sydney Classification VS"
+ValueSet: SydneyClassificationVS
+Id: sydney-classification
+Title: "Sydney Classification"
 Description: "Sydney classification types for colon wall injury during diagnostic colonoscopy."
-* ^url = $sydney-classification-lt-colorectal-url
+* ^url = $sydney-classification-vs-url
 * ^status = #active
 * ^experimental = false
 * ^publisher = "HL7 Lithuania"
 
-* include codes from system SydneyClassificationCsLtColorectal
+* include codes from system SydneyClassificationCS

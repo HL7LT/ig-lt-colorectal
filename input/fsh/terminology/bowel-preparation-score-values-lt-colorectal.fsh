@@ -1,6 +1,6 @@
-ValueSet: BowelPrepScoreValuesLtColorectal
-Id: bowel-prep-score-values-lt-colorectal
-Title: "Colorectal - Bowel Preparation Score Values (Boston Scale) VS"
+ValueSet: BowelPrepScoreValuesVS
+Id: bowel-prep-score-values
+Title: "Bowel Preparation Score Values (Boston Scale)"
 Description: "SNOMED CT codes representing the Boston Bowel Preparation Scale segment scores (0 to 3 points)."
 * ^status = #active
 * ^experimental = false

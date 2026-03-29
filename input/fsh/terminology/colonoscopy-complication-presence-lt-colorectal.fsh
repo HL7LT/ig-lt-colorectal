@@ -1,8 +1,8 @@
-ValueSet: ColonoscopyComplicationPresenceLtColorectal
-Id: colonoscopy-complication-presence-lt-colorectal
-Title: "Colorectal - Diagnostic Colonoscopy Complication Presence VS"
+ValueSet: ColonoscopyComplicationPresenceVS
+Id: colonoscopy-complication-presence
+Title: "Colonoscopy Complication Presence"
 Description: "Indicates whether there was a complication after diagnostic colonoscopy."
-* ^url = $colonoscopy-complication-presence-lt-colorectal-url
+* ^url = $colonoscopy-complication-presence-vs-url
 * ^status = #active
 * ^experimental = false
 * ^publisher = "HL7 Lithuania"
