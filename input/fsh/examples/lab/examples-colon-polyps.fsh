@@ -3,6 +3,7 @@ Id: polyp-predicted-histology
 Title: "Colorectal - Polyp Predicted Histology VS"
 Description: "Endoscopic prediction of polyp histology using virtual chromoendoscopy."
 * ^status = #active
+* ^experimental = false
 * ^publisher = "HL7 Lithuania"
 
 * $sct#721691004 "Hyperplastic polyp of large intestine (disorder)"
@@ -16,6 +17,7 @@ Id: observation-polyp-lt-colorectal
 Title: "Colon Polyp Observation (LT Colorectal)"
 Description: "Profile for recording a colon polyp, enforcing the inclusion of size, Paris/NICE classifications, and SMSA scoring."
 * ^status = #active
+* ^experimental = false
 * ^publisher = "HL7 Lithuania"
 
 * category = $observation-category#exam "Exam"
@@ -72,6 +74,7 @@ Id: colorectal-polyp-codes-lt
 Title: "Colorectal - Local Polyp Codes CS"
 Description: "Local codes for polyp classifications (Paris, NICE, Access, SMSA) used in the Lithuanian colorectal screening program."
 * ^status = #active
+* ^experimental = false
 * ^publisher = "HL7 Lithuania"
 * ^caseSensitive = true
 
@@ -163,6 +166,7 @@ Id: colorectal-polypectomy-codes-lt
 Title: "Colorectal - Local Polypectomy Codes CS"
 Description: "Local codes for polypectomy techniques, instruments, and hydropreparation used in the colorectal screening program."
 * ^status = #active
+* ^experimental = false
 * ^publisher = "HL7 Lithuania"
 * ^caseSensitive = true
 
@@ -194,6 +198,7 @@ ValueSet: PolypectomyLumenFillingLtColorectal
 Id: polypectomy-lumen-filling-lt-colorectal
 Title: "Colorectal - Polypectomy Lumen Filling VS"
 * ^status = #active
+* ^experimental = false
 * ^publisher = "HL7 Lithuania"
 * ColorectalPolypectomyCodesLt#fill-air
 * ColorectalPolypectomyCodesLt#fill-water
@@ -202,6 +207,7 @@ ValueSet: PolypectomyInstrumentLtColorectal
 Id: polypectomy-instrument-lt-colorectal
 Title: "Colorectal - Polypectomy Instrument VS"
 * ^status = #active
+* ^experimental = false
 * ^publisher = "HL7 Lithuania"
 * ColorectalPolypectomyCodesLt#inst-loop-hot
 * ColorectalPolypectomyCodesLt#inst-loop-cold
@@ -211,6 +217,7 @@ ValueSet: PolypectomyExcisionMethodLtColorectal
 Id: polypectomy-excision-method-lt-colorectal
 Title: "Colorectal - Polypectomy Excision Method VS"
 * ^status = #active
+* ^experimental = false
 * ^publisher = "HL7 Lithuania"
 * ColorectalPolypectomyCodesLt#exc-en-bloc
 * ColorectalPolypectomyCodesLt#exc-parts
@@ -219,6 +226,7 @@ ValueSet: PolypectomyHydroprepLtColorectal
 Id: polypectomy-hydroprep-lt-colorectal
 Title: "Colorectal - Polypectomy Hydropreparation VS"
 * ^status = #active
+* ^experimental = false
 * ^publisher = "HL7 Lithuania"
 * ColorectalPolypectomyCodesLt#hydro-pending
 * ColorectalPolypectomyCodesLt#hydro-phys-sol
@@ -230,6 +238,7 @@ ValueSet: PolypectomyHistologyStatusLtColorectal
 Id: polypectomy-histology-status-lt-colorectal
 Title: "Colorectal - Polypectomy Histology Status VS"
 * ^status = #active
+* ^experimental = false
 * ^publisher = "HL7 Lithuania"
 * ColorectalPolypectomyCodesLt#hist-sent
 * ColorectalPolypectomyCodesLt#hist-not-sent
@@ -239,6 +248,7 @@ Id: procedure-method
 Title: "Procedure Method"
 Description: "The method or technique used to perform the procedure."
 * ^status = #active
+* ^experimental = false
 * ^publisher = "HL7 Lithuania"
 * value[x] only CodeableConcept
 
@@ -248,6 +258,7 @@ Id: procedure-polypectomy-lt-colorectal
 Title: "Colonic Polypectomy Procedure (LT Colorectal)"
 Description: "Profile enforcing the mandatory documentation of the polypectomy technique, tools, and histology outcome using local codes."
 * ^status = #active
+* ^experimental = false
 * ^publisher = "HL7 Lithuania"
 
 * category = $sct#387713003 "Surgical procedure (procedure)"

@@ -15,7 +15,7 @@ and care recommendations after colonoscopy.
 * intent 1..1
 * intent = #plan
 * category 1..1
-* category = $sct#268548003 "Screening for malignant neoplasm of colon (procedure)"
+* category = $sct#268548003 "Screening for malignant neoplasm of large intestine (procedure)"
 * title 1..1
 * subject 1..1
 * subject only Reference(PatientLt)

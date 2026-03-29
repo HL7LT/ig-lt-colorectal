@@ -7,7 +7,7 @@ Description: "Profile for recording the final diagnostic conclusion of a colonos
 * ^status = #active
 
 * category = $observation-category#exam "Exam"
-* code = $sct#371524004 "Clinical report conclusion (qualifier value)"
+* code = $sct#371524004 "Clinical report (record artifact)"
 * code MS
 * subject 1..1 MS
 * subject only Reference(PatientLt)

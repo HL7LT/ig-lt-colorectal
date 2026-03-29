@@ -18,7 +18,7 @@ All colonoscopy results are linked into a single [Colonoscopy Composition](Struc
 
 Eligible individuals aged 50--75 are invited to participate in the screening programme. The primary screening method is a fecal immunochemical test (FIT) for occult blood in stool.
 
-**Profile**: [FobtObservationLtColorectal](StructureDefinition-fobt-observation-lt-colorectal.html)
+**Profile**: [ObservationFecalOccultBloodTestResultLtColorectal](StructureDefinition-observation-fecal-occult-blood-test-result-lt-colorectal.html)
 
 Two test types are supported (from [FOBT Test Codes](ValueSet-fecal-occult-blood-test-codes.html)):
 - **Qualitative** (LOINC 80372-6) -- rapid immunoassay, result: detected / not detected (from [FOBT Qualitative Result](ValueSet-fecal-occult-blood-qualitative-result.html))
@@ -82,7 +82,7 @@ Additional preparation details may be documented:
 
 ##### 2.4 Polyp Findings
 
-Individual polyps are documented using the [Polyp Finding](StructureDefinition-polyp-finding-lt-colorectal.html) profile with components for:
+Individual polyps are documented using the [Polyp Finding](StructureDefinition-observation-polyp-lt-colorectal.html) profile with components for:
 - **Location** -- anatomical site with SMSA scoring (2 points for proximal, 1 point for distal)
 - **Paris classification** -- morphological type (from [Paris Classification VS](ValueSet-paris-classification.html)): Is, ISP, IP, IIa, IIb, IIc, and LST subtypes
 - **NICE classification** -- endoscopic histology prediction (from [NICE Classification VS](ValueSet-nice-classification.html)): Type I (hyperplastic), Type II (adenoma), Type III (invasive cancer)
@@ -93,7 +93,7 @@ Individual polyps are documented using the [Polyp Finding](StructureDefinition-p
 
 Photo documentation is linked via `derivedFrom` references to Media/DocumentReference resources (minimum 2 photos per polyp: white light and chromoendoscopy).
 
-When a polyp is removed, a [Polypectomy Procedure](StructureDefinition-polypectomy-procedure-lt-colorectal.html) is recorded with details about the removal method (from [Polypectomy Method VS](ValueSet-polypectomy-method.html)): snare loop, pliers, hot/cold method, en bloc or in parts, and hydropreparation technique.
+When a polyp is removed, a [Polypectomy Procedure](StructureDefinition-procedure-polypectomy-lt-colorectal.html) is recorded with details about the removal method (from [Polypectomy Method VS](ValueSet-polypectomy-method.html)): snare loop, pliers, hot/cold method, en bloc or in parts, and hydropreparation technique.
 
 If the polyp is sent for histological examination, the biopsy procedure, sample number, and pathology response are tracked. The **adenoma detection rate** quality indicator is calculated from pathology results.
 

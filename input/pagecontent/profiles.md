@@ -10,14 +10,14 @@ This page lists all StructureDefinition profiles defined in this Implementation 
 #### Procedures
 
 - [Colonoscopy Procedure](StructureDefinition-colonoscopy-procedure-lt-colorectal.html) -- the colonoscopy procedure with anesthesia and indication details
-- [Polypectomy Procedure](StructureDefinition-polypectomy-procedure-lt-colorectal.html) -- polyp removal procedure with method details
+- [Polypectomy Procedure](StructureDefinition-procedure-polypectomy-lt-colorectal.html) -- polyp removal procedure with method details
 - [Colonoscopy Bleeding Control](StructureDefinition-colonoscopy-bleeding-control-lt-colorectal.html) -- bleeding control during colonoscopy
 
 #### Observations -- Colonoscopy Findings
 
 - [Colonoscope Reach](StructureDefinition-colonoscope-reach-lt-colorectal.html) -- how far the colonoscope reached
 - [Bowel Preparation Quality](StructureDefinition-bowel-preparation-quality-lt-colorectal.html) -- Boston Bowel Preparation Scale assessment
-- [Polyp Finding](StructureDefinition-polyp-finding-lt-colorectal.html) -- individual polyp with Paris/NICE classification, size, SMSA scoring
+- [Polyp Observation](StructureDefinition-observation-polyp-lt-colorectal.html) -- individual polyp with Paris/NICE classification, size, SMSA scoring
 - [Tumor Finding](StructureDefinition-tumor-finding-lt-colorectal.html) -- tumor finding with location and biopsy status
 - [Colonoscopy Conclusion](StructureDefinition-colonoscopy-conclusion-lt-colorectal.html) -- conclusion/diagnosis from colonoscopy
 
@@ -29,7 +29,7 @@ This page lists all StructureDefinition profiles defined in this Implementation 
 
 #### Observations -- FOBT & Pathology
 
-- [FOBT Observation](StructureDefinition-fobt-observation-lt-colorectal.html) -- fecal occult blood test result
+- [Fecal Occult Blood Test Result](StructureDefinition-observation-fecal-occult-blood-test-result-lt-colorectal.html) -- fecal occult blood test result
 - [Histological Diagnosis](StructureDefinition-histological-diagnosis-lt-colorectal.html) -- colorectal-specific histological diagnosis with dysplasia, budding, invasion, and MMRP components
 
 #### Reused from LT Lab (not redefined here)

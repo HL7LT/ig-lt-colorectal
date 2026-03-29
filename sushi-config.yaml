@@ -75,7 +75,34 @@ pages:
 
 parameters:
   special-url-base: https://hl7.lt/fhir
-  special-url: https://tx.hl7.lt/fhir
+  special-url:
+    - https://tx.hl7.lt/fhir/CodeSystem/snomed-extension-lt-colorectal
+    - https://tx.hl7.lt/fhir/CodeSystem/sydney-classification
+    - https://tx.hl7.lt/fhir/ValueSet/bbps-colon-segments
+    - https://tx.hl7.lt/fhir/ValueSet/bowel-prep-score-values
+    - https://tx.hl7.lt/fhir/ValueSet/bowel-preparation-quality
+    - https://tx.hl7.lt/fhir/ValueSet/bowel-preparation-substance
+    - https://tx.hl7.lt/fhir/ValueSet/colonoscope-reach
+    - https://tx.hl7.lt/fhir/ValueSet/colonoscopy-complication-presence
+    - https://tx.hl7.lt/fhir/ValueSet/colonoscopy-complication-type
+    - https://tx.hl7.lt/fhir/ValueSet/colonoscopy-wall-injury-action
+    - https://tx.hl7.lt/fhir/ValueSet/colorectal-anatomy
+    - https://tx.hl7.lt/fhir/ValueSet/colorectal-conclusion
+    - https://tx.hl7.lt/fhir/ValueSet/colorectal-histological-diagnosis
+    - https://tx.hl7.lt/fhir/ValueSet/dysplasia-grade
+    - https://tx.hl7.lt/fhir/ValueSet/fecal-occult-blood-qualitative-result
+    - https://tx.hl7.lt/fhir/ValueSet/fecal-occult-blood-test-codes
+    - https://tx.hl7.lt/fhir/ValueSet/invasion-depth
+    - https://tx.hl7.lt/fhir/ValueSet/mmrp-expression
+    - https://tx.hl7.lt/fhir/ValueSet/molecular-test-result
+    - https://tx.hl7.lt/fhir/ValueSet/molecular-test-type
+    - https://tx.hl7.lt/fhir/ValueSet/nice-classification
+    - https://tx.hl7.lt/fhir/ValueSet/paris-classification
+    - https://tx.hl7.lt/fhir/ValueSet/polyp-access
+    - https://tx.hl7.lt/fhir/ValueSet/polypectomy-method
+    - https://tx.hl7.lt/fhir/ValueSet/radicalism-of-removal
+    - https://tx.hl7.lt/fhir/ValueSet/sydney-classification
+    - https://tx.hl7.lt/fhir/ValueSet/tumor-budding
 
   excludettl: true
   shownav: true
