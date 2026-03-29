@@ -1,4 +1,5 @@
 Profile: ScreeningCarePlanLtColorectal
+// TODO: Change Parent to ScreeningCarePlanLt after ig-lt-base is published with it
 Parent: CarePlanLt
 Id: screening-careplan-lt-colorectal
 Title: "Screening CarePlan (LT Colorectal)"
