@@ -78,6 +78,10 @@ Description: "A completed ESPBI colonoscopy form for the Lithuanian colorectal c
 * item[=].item[=].text = "Was written information about preparation given?"
 * item[=].item[=].answer[+].valueCoding = $sct#373066001 "Yes"
 
+* item[=].item[+].linkId = "bowelPrep.usedPreparations"
+* item[=].item[=].text = "Used preparations for bowel preparation"
+* item[=].item[=].answer[+].valueCoding = $sct#712567003 "Macrogol 4000 (substance)"
+
 // ────────────────────────────────────────────────────────────────────────
 // Group 3: Colonoscope reach
 // ────────────────────────────────────────────────────────────────────────

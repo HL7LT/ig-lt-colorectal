@@ -137,6 +137,15 @@ Description: "ESPBI form for colonoscopy in the Lithuanian colorectal cancer scr
 * item[=].item[=].answerOption[+].valueCoding = $sct#373066001 "Yes"
 * item[=].item[=].answerOption[+].valueCoding = $sct#373067005 "No"
 
+* item[=].item[+].linkId = "bowelPrep.usedPreparations"
+* item[=].item[=].text = "Used preparations for bowel preparation"
+* item[=].item[=].type = #coding
+* item[=].item[=].repeats = true
+* item[=].item[=].answerOption[+].valueCoding = $sct#712567003 "Macrogol 4000 (substance)"
+* item[=].item[=].answerOption[+].valueCoding = $sct#712566007 "Macrogol 3350 (substance)"
+* item[=].item[=].answerOption[+].valueCoding = $sct#715699009 "Product containing citric acid and magnesium oxide and sodium picosulfate (medicinal product)"
+* item[=].item[=].answerOption[+].valueCoding = $sct#69958001 "Sodium sulfate (substance)"
+
 // ────────────────────────────────────────────────────────────────────────
 // Group 3: Colonoscope reach
 // ────────────────────────────────────────────────────────────────────────
@@ -147,17 +156,17 @@ Description: "ESPBI form for colonoscopy in the Lithuanian colorectal cancer scr
 * item[=].item[+].linkId = "scopeReach.reachLocation"
 * item[=].item[=].text = "Deepest point reached by colonoscope"
 * item[=].item[=].type = #coding
-* item[=].item[=].answerOption[+].valueCoding = $sct#34402009 "Rectum structure"
-* item[=].item[=].answerOption[+].valueCoding = $sct#60184004 "Sigmoid colon structure"
-* item[=].item[=].answerOption[+].valueCoding = $sct#32622004 "Descending colon structure"
-* item[=].item[=].answerOption[+].valueCoding = $sct#72592005 "Splenic flexure structure"
-* item[=].item[=].answerOption[+].valueCoding = $sct#485005 "Transverse colon structure"
-* item[=].item[=].answerOption[+].valueCoding = $sct#48338005 "Hepatic flexure structure"
-* item[=].item[=].answerOption[+].valueCoding = $sct#9040008 "Ascending colon structure"
-* item[=].item[=].answerOption[+].valueCoding = $sct#32713005 "Cecum structure"
-* item[=].item[=].answerOption[+].valueCoding = $sct#34516001 "Ileum structure"
-* item[=].item[=].answerOption[+].valueCoding = $sct#85774003 "Terminal ileum structure"
-* item[=].item[=].answerOption[+].valueCoding = $sct#181261002 "Entire large intestine"
+* item[=].item[=].answerOption[+].valueCoding = $sct#34402009 "Rectum structure (body structure)"
+* item[=].item[=].answerOption[+].valueCoding = $sct#60184004 "Sigmoid colon structure (body structure)"
+* item[=].item[=].answerOption[+].valueCoding = $sct#32622004 "Descending colon structure (body structure)"
+* item[=].item[=].answerOption[+].valueCoding = $sct#72592005 "Structure of left colic flexure (body structure)"
+* item[=].item[=].answerOption[+].valueCoding = $sct#485005 "Transverse colon structure (body structure)"
+* item[=].item[=].answerOption[+].valueCoding = $sct#48338005 "Structure of right colic flexure (body structure)"
+* item[=].item[=].answerOption[+].valueCoding = $sct#9040008 "Ascending colon structure (body structure)"
+* item[=].item[=].answerOption[+].valueCoding = $sct#32713005 "Cecum structure (body structure)"
+* item[=].item[=].answerOption[+].valueCoding = $sct#34516001 "Ileal structure (body structure)"
+* item[=].item[=].answerOption[+].valueCoding = $sct#85774003 "Structure of distal portion of ileum (body structure)"
+* item[=].item[=].answerOption[+].valueCoding = $sct#181261002 "Entire rectum (body structure)"
 
 // ────────────────────────────────────────────────────────────────────────
 // Group 4: Polyp findings (repeating)
@@ -174,15 +183,16 @@ Description: "ESPBI form for colonoscopy in the Lithuanian colorectal cancer scr
 * item[=].item[+].linkId = "polypFindings.location"
 * item[=].item[=].text = "Polyp location"
 * item[=].item[=].type = #coding
-* item[=].item[=].answerOption[+].valueCoding = $sct#34402009 "Rectum structure"
-* item[=].item[=].answerOption[+].valueCoding = $sct#60184004 "Sigmoid colon structure"
-* item[=].item[=].answerOption[+].valueCoding = $sct#32622004 "Descending colon structure"
-* item[=].item[=].answerOption[+].valueCoding = $sct#72592005 "Splenic flexure structure"
-* item[=].item[=].answerOption[+].valueCoding = $sct#485005 "Transverse colon structure"
-* item[=].item[=].answerOption[+].valueCoding = $sct#48338005 "Hepatic flexure structure"
-* item[=].item[=].answerOption[+].valueCoding = $sct#9040008 "Ascending colon structure"
-* item[=].item[=].answerOption[+].valueCoding = $sct#32713005 "Cecum structure"
-* item[=].item[=].answerOption[+].valueCoding = $sct#85774003 "Terminal ileum structure"
+* item[=].item[=].answerOption[+].valueCoding = $sct#34402009 "Rectum structure (body structure)"
+* item[=].item[=].answerOption[+].valueCoding = $sct#60184004 "Sigmoid colon structure (body structure)"
+* item[=].item[=].answerOption[+].valueCoding = $sct#32622004 "Descending colon structure (body structure)"
+* item[=].item[=].answerOption[+].valueCoding = $sct#72592005 "Structure of left colic flexure (body structure)"
+* item[=].item[=].answerOption[+].valueCoding = $sct#485005 "Transverse colon structure (body structure)"
+* item[=].item[=].answerOption[+].valueCoding = $sct#48338005 "Structure of right colic flexure (body structure)"
+* item[=].item[=].answerOption[+].valueCoding = $sct#9040008 "Ascending colon structure (body structure)"
+* item[=].item[=].answerOption[+].valueCoding = $sct#32713005 "Cecum structure (body structure)"
+* item[=].item[=].answerOption[+].valueCoding = $sct#34516001 "Ileal structure (body structure)"
+* item[=].item[=].answerOption[+].valueCoding = $sct#85774003 "Structure of distal portion of ileum (body structure)"
 
 * item[=].item[+].linkId = "polypFindings.sizeMm"
 * item[=].item[=].text = "Polyp size (mm)"
@@ -292,15 +302,16 @@ Description: "ESPBI form for colonoscopy in the Lithuanian colorectal cancer scr
 * item[=].item[+].linkId = "tumorFindings.tumorLocation"
 * item[=].item[=].text = "Tumor location"
 * item[=].item[=].type = #coding
-* item[=].item[=].answerOption[+].valueCoding = $sct#34402009 "Rectum structure"
-* item[=].item[=].answerOption[+].valueCoding = $sct#60184004 "Sigmoid colon structure"
-* item[=].item[=].answerOption[+].valueCoding = $sct#32622004 "Descending colon structure"
-* item[=].item[=].answerOption[+].valueCoding = $sct#72592005 "Splenic flexure structure"
-* item[=].item[=].answerOption[+].valueCoding = $sct#485005 "Transverse colon structure"
-* item[=].item[=].answerOption[+].valueCoding = $sct#48338005 "Hepatic flexure structure"
-* item[=].item[=].answerOption[+].valueCoding = $sct#9040008 "Ascending colon structure"
-* item[=].item[=].answerOption[+].valueCoding = $sct#32713005 "Cecum structure"
-* item[=].item[=].answerOption[+].valueCoding = $sct#85774003 "Terminal ileum structure"
+* item[=].item[=].answerOption[+].valueCoding = $sct#34402009 "Rectum structure (body structure)"
+* item[=].item[=].answerOption[+].valueCoding = $sct#60184004 "Sigmoid colon structure (body structure)"
+* item[=].item[=].answerOption[+].valueCoding = $sct#32622004 "Descending colon structure (body structure)"
+* item[=].item[=].answerOption[+].valueCoding = $sct#72592005 "Structure of left colic flexure (body structure)"
+* item[=].item[=].answerOption[+].valueCoding = $sct#485005 "Transverse colon structure (body structure)"
+* item[=].item[=].answerOption[+].valueCoding = $sct#48338005 "Structure of right colic flexure (body structure)"
+* item[=].item[=].answerOption[+].valueCoding = $sct#9040008 "Ascending colon structure (body structure)"
+* item[=].item[=].answerOption[+].valueCoding = $sct#32713005 "Cecum structure (body structure)"
+* item[=].item[=].answerOption[+].valueCoding = $sct#34516001 "Ileal structure (body structure)"
+* item[=].item[=].answerOption[+].valueCoding = $sct#85774003 "Structure of distal portion of ileum (body structure)"
 
 * item[=].item[+].linkId = "tumorFindings.tumorDescription"
 * item[=].item[=].text = "Tumor description"

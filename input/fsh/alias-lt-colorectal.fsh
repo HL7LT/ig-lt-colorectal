@@ -13,6 +13,8 @@ Alias: $tumor-finding-lt-colorectal-url = https://hl7.lt/fhir/colorectal/Structu
 Alias: $colonoscopy-conclusion-lt-colorectal-url = https://hl7.lt/fhir/colorectal/StructureDefinition/colonoscopy-conclusion-lt-colorectal
 Alias: $fobt-observation-lt-colorectal-url = https://hl7.lt/fhir/colorectal/StructureDefinition/fobt-observation-lt-colorectal
 Alias: $histological-diagnosis-lt-colorectal-url = https://hl7.lt/fhir/colorectal/StructureDefinition/histological-diagnosis-lt-colorectal
+Alias: $fecal-occult-blood-test-report-lt-colorectal-url = https://hl7.lt/fhir/colorectal/StructureDefinition/fecal-occult-blood-test-report-lt-colorectal
+Alias: $observation-fecal-occult-blood-test-result-lt-colorectal-url = https://hl7.lt/fhir/colorectal/StructureDefinition/observation-fecal-occult-blood-test-result-lt-colorectal
 
 // Profiles — Procedures
 Alias: $colonoscopy-procedure-lt-colorectal-url = https://hl7.lt/fhir/colorectal/StructureDefinition/colonoscopy-procedure-lt-colorectal
@@ -52,3 +54,4 @@ Alias: $radicalism-of-removal-vs-url = https://tx.hl7.lt/fhir/ValueSet/radicalis
 Alias: $tumor-budding-vs-url = https://tx.hl7.lt/fhir/ValueSet/tumor-budding
 Alias: $invasion-depth-vs-url = https://tx.hl7.lt/fhir/ValueSet/invasion-depth
 Alias: $mmrp-expression-vs-url = https://tx.hl7.lt/fhir/ValueSet/mmrp-expression
+Alias: $yes-no-url = https://tx.hl7.lt/fhir/ValueSet/yes-no
