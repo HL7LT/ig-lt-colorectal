@@ -17,7 +17,7 @@ Description: "Colonoscopy screening episode composition for the Lithuanian color
     bleedingControl 0..*
 * section[procedure].entry[colonoscopyProcedure] only Reference(ColonoscopyProcedureLtColorectal)
 * section[procedure].entry[colonoscopyProcedure] ^short = "Colonoscopy procedure"
-* section[procedure].entry[polypectomyProcedure] only Reference(PolypectomyProcedureLtColorectal)
+* section[procedure].entry[polypectomyProcedure] only Reference(ProcedureLt)
 * section[procedure].entry[polypectomyProcedure] ^short = "Polypectomy procedure"
 * section[procedure].entry[bleedingControl] only Reference(ColonoscopyBleedingControlLtColorectal)
 * section[procedure].entry[bleedingControl] ^short = "Bleeding control procedure"
@@ -35,7 +35,7 @@ Description: "Colonoscopy screening episode composition for the Lithuanian color
 * section[findings].entry[colonoscopeReach] ^short = "How far the colonoscope reached"
 * section[findings].entry[bowelPrepQuality] only Reference(BowelPreparationQualityLtColorectal)
 * section[findings].entry[bowelPrepQuality] ^short = "Bowel preparation quality assessment"
-* section[findings].entry[polypFinding] only Reference(PolypFindingLtColorectal)
+* section[findings].entry[polypFinding] only Reference(ObservationPolypLtColorectal)
 * section[findings].entry[polypFinding] ^short = "Individual polyp finding"
 * section[findings].entry[tumorFinding] only Reference(TumorFindingLtColorectal)
 * section[findings].entry[tumorFinding] ^short = "Tumor finding"

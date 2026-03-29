@@ -53,7 +53,7 @@ Description: "Profile for recording a colon polyp, enforcing the inclusion of si
 // 4. Predicted Histology
 * component[predictedHistology].code = ColorectalPolypCodesLt#comp-hist-predict
 * component[predictedHistology].value[x] only CodeableConcept
-* component[predictedHistology].valueCodeableConcept from PolypPredictedHistologyLtColorectal (required)
+* component[predictedHistology].valueCodeableConcept from PolypPredictedHistologyVS (required)
 
 // 5. Access
 * component[access].code = ColorectalPolypCodesLt#comp-access
