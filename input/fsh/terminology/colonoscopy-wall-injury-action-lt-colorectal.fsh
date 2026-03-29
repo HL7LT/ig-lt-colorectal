@@ -1,8 +1,8 @@
-ValueSet: ColonoscopyWallInjuryActionLtColorectal
-Id: colonoscopy-wall-injury-action-lt-colorectal
-Title: "Colorectal - Diagnostic Colonoscopy Wall Injury Action VS"
+ValueSet: ColonoscopyWallInjuryActionVS
+Id: colonoscopy-wall-injury-action
+Title: "Colonoscopy Wall Injury Action"
 Description: "Actions taken after colon wall injury during diagnostic colonoscopy."
-* ^url = $colonoscopy-wall-injury-action-lt-colorectal-url
+* ^url = $colonoscopy-wall-injury-action-vs-url
 * ^status = #active
 * ^experimental = false
 * ^publisher = "HL7 Lithuania"

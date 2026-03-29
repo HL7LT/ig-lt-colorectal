@@ -1,7 +1,8 @@
-ValueSet: ColorectalAnatomyLtColorectal
-Id: colorectal-anatomy-lt-colorectal
-Title: "Colorectal - Shared Anatomy VS"
+ValueSet: ColorectalAnatomyVS
+Id: colorectal-anatomy
+Title: "Colorectal Anatomy"
 Description: "Shared SNOMED CT codes representing the anatomical segments of the colon and rectum. Used for recording locations of tumors, polyps, and colonoscope reach."
+* ^url = $colorectal-anatomy-vs-url
 * ^status = #active
 * ^experimental = false
 * ^publisher = "HL7 Lithuania"

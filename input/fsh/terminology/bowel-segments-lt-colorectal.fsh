@@ -1,6 +1,6 @@
-ValueSet: BbpsColonSegmentsLtColorectal
-Id: bbps-colon-segments-lt-colorectal
-Title: "Colorectal - BBPS Colon Segments VS"
+ValueSet: BbpsColonSegmentsVS
+Id: bbps-colon-segments
+Title: "BBPS Colon Segments"
 Description: "SNOMED CT codes representing the three segments of the colon evaluated in the Boston Bowel Preparation Scale."
 * ^status = #active
 * ^experimental = false

@@ -1,8 +1,8 @@
-ValueSet: ColonoscopeReachLtColorectal
-Id: colonoscope-reach-lt-colorectal
-Title: "Colorectal - Colonoscope Reach"
+ValueSet: ColonoscopeReachVS
+Id: colonoscope-reach
+Title: "Colonoscope Reach"
 Description: "SNOMED CT anatomical structures identifying how far the colonoscope reached during the examination."
-* ^url = $colonoscope-reach-lt-colorectal-url
+* ^url = $colonoscope-reach-vs-url
 * ^status = #active
 * ^experimental = false
 * ^publisher = "HL7 Lithuania"

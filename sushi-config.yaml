@@ -26,6 +26,7 @@ dependencies:
   lt.hl7.fhir.vitalsigns: current
   lt.hl7.fhir.eu: 0.0.2
   hl7.fhir.eu.base-r5: 0.1.0
+  lt.hl7.fhir.lab: current
 
 # The pages property corresponds to IG.definition.page. SUSHI can
 # auto-generate the page list, but if the author includes pages in
@@ -62,6 +63,12 @@ pages:
     title: Home
   workflow.md:
     title: Workflow
+  profiles.md:
+    title: Profiles
+  terminology.md:
+    title: Terminology
+  examples.md:
+    title: Examples
   questionnaire.md:
     title: Questionnaires
 
@@ -99,6 +106,9 @@ parameters:
 menu:
   Home: index.html
   Workflow: workflow.html
+  Profiles: profiles.html
+  Terminology: terminology.html
+  Examples: examples.html
   Questionnaires: questionnaire.html
   Artifacts: artifacts.html
 

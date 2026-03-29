@@ -1,8 +1,8 @@
-ValueSet: BowelPreparationQualityLtColorectal
-Id: bowel-preparation-quality-lt-colorectal
-Title: "Colorectal - Quality of Bowel Preparation VS"
+ValueSet: BowelPreparationQualityVS
+Id: bowel-preparation-quality
+Title: "Bowel Preparation Quality"
 Description: "SNOMED CT codes representing the overall quality of bowel preparation for a colonoscopy procedure."
-* ^url = $bowel-preparation-quality-lt-colorectal-url
+* ^url = $bowel-preparation-quality-vs-url
 * ^status = #active
 * ^experimental = false
 * ^publisher = "HL7 Lithuania"

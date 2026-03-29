@@ -12,7 +12,7 @@ Description: "Profile for recording the result of a fecal occult blood test in t
 * category = $observation-category#laboratory "Laboratory"
 
 * code 1..1
-* code from FecalOccultBloodTestCodesLtColorectal (required)
+* code from FecalOccultBloodTestCodesVS (required)
 
 * subject 1..1
 * subject only Reference(PatientLt)
@@ -27,4 +27,4 @@ Description: "Profile for recording the result of a fecal occult blood test in t
 * value[x] only Quantity or CodeableConcept
 * valueQuantity ^short = "Quantitative result (e.g., µg/L)"
 * valueCodeableConcept ^short = "Qualitative result (e.g., Detected, Not detected)"
-* valueCodeableConcept from FecalOccultBloodQualitativeResultLtColorectal (required)
+* valueCodeableConcept from FecalOccultBloodQualitativeResultVS (required)

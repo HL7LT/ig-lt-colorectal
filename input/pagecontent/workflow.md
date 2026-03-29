@@ -1,35 +1,219 @@
-# Colorectal cancer screening workflow
+### Colorectal Cancer Screening Workflow
 
-The colorectal cancer screening workflow begins when an eligible patient participates in the prevention program and performs a fecal occult blood test. The screening result may indicate that [occult blood was not detected in the stool](Observation-observation-fobt-qualitative-not-detected-example.html), meaning no evidence of gastrointestinal bleeding was identified at the time of testing.
+This page describes the clinical workflow modeled by the Lithuanian Colorectal Cancer Prevention Implementation Guide. The pathway follows the national colorectal cancer early diagnosis programme (ADP).
 
-Before laboratory analysis is performed, a stool sample is collected and documented as a [stool specimen](Specimen-specimen-stool-fobt-example.html). The specimen represents the biological material used for the laboratory measurement and establishes traceability between the analyzed sample and the observation result.
+#### Overview
 
-Screening may identify either the absence or presence of blood in the stool. A negative result may show that occult blood was not detected in the stool, while a positive result indicates that occult blood was detected. In some situations the result may also be represented as a [quantitative hemoglobin measurement in stool](Observation-observation-fobt-quantitative-example.html), where the concentration of hemoglobin is recorded numerically. These findings may be brought together in a [diagnostic report](DiagnosticReport-diagnosticreport-fobt-qualitative-not-detected-example.html), which links the laboratory result with the associated [stool specimen](Specimen-specimen-stool-fobt-example.html) and summarizes the screening outcome.
+The colorectal cancer screening pathway consists of three sequential stages, each producing structured FHIR resources:
 
-Patients with abnormal screening results are referred for colonoscopy. The diagnostic examination is recorded as a [screening colonoscopy procedure](Procedure-procedure-colonoscopy-no-anesthesia-example.html). The procedure represents the endoscopic inspection of the colon and rectum performed for diagnostic evaluation after screening.
+1. **Fecal Occult Blood Testing (FOBT)** -- primary screening with immunochemical stool testing
+2. **Colonoscopic Examination** -- diagnostic colonoscopy with polyp/tumor assessment
+3. **Pathological Histological Examination** -- tissue analysis from biopsy or polypectomy specimens
 
-During some procedures sedation or anesthesia may be administered as part of the procedural context, which may be documented as a [colonoscopy anesthesia procedure](Procedure-procedure-colonoscopy-with-anesthesia-example.html). Recording anesthesia provides additional context describing how the colonoscopy was performed.
+All colonoscopy results are linked into a single [Colonoscopy Composition](StructureDefinition-colonoscopy-composition-lt-colorectal.html) wrapped by a [Colonoscopy Report](StructureDefinition-colonoscopy-report-lt-colorectal.html). Pathology results use profiles from the [Laboratory IG](https://build.fhir.org/ig/HL7LT/ig-lt-lab/).
 
-During the colonoscopy the endoscopist advances the colonoscope through the colon and documents the most distal anatomical segment reached. The examination may reach the [cecum](Observation-observation-colonoscope-reach-cecum-example.html) or extend further to the [terminal ileum](Observation-observation-colonoscope-reach-ileum-example.html), allowing the completeness of the examination to be recorded.
+---
 
-The adequacy of bowel preparation is documented because it directly affects visualization of the intestinal mucosa. Adequate cleansing may be recorded as [effective bowel preparation](Observation-observation-bowel-prep-effective-example.html), while insufficient cleansing may be documented as [inadequate bowel preparation](Observation-observation-bowel-prep-inadequate-example.html).
+#### 1. Fecal Occult Blood Testing (FOBT)
 
-To provide a precise evaluation, the preparation quality is scored using the Boston Bowel Preparation Scale (BBPS). The endoscopist evaluates specific segments of the colon, documenting individual scores such as the [BBPS left colon score](Observation-observation-bbps-left-colon-example.html) and the [BBPS transverse colon score](Observation-observation-bbps-transverse-colon-example.html). These segment scores are then calculated into a total score that is recorded alongside the overall quality assessment. A successful preparation is documented as an [effective bowel preparation with a total score](Observation-observation-bowel-prep-total-effective-example.html) (e.g., >= 6 points), whereas poor cleansing is recorded as an [inadequate bowel preparation with a total score](Observation-observation-bowel-prep-total-inadequate-example.html) (e.g., < 6 points). In cases where the patient failed to prepare, it is simply documented that the [bowel preparation was not done](Observation-observation-bowel-prep-not-done-example.html).
+Eligible individuals aged 50--75 are invited to participate in the screening programme. The primary screening method is a fecal immunochemical test (FIT) for occult blood in stool.
 
-After completion of the colonoscopy procedure the clinician evaluates whether complications occurred. The absence of complications may be recorded as [no complication observed after diagnostic colonoscopy](Observation-observation-colonoscopy-complication-presence-no-example.html). If an adverse event occurs, this is documented as [complication present after diagnostic colonoscopy](Observation-observation-colonoscopy-complication-presence-yes-example.html).
+**Profile**: [FobtObservationLtColorectal](StructureDefinition-fobt-observation-lt-colorectal.html)
 
-When complications are present, the specific complication type is recorded. Possible complication types include [hemorrhage of the colon](Observation-observation-colonoscopy-complication-hemorrhage-example.html), [complication of anesthesia](Observation-observation-colonoscopy-complication-anesthesia-example.html), [accidental organ perforation during a procedure](Observation-observation-colonoscopy-comp-perforation-example.html), [perforation of the large intestine](Observation-observation-colonoscopy-complication-large-perforation-example.html). These observations represent structured documentation of clinically significant adverse events associated with diagnostic colonoscopy.
+Two test types are supported (from [FOBT Test Codes](ValueSet-fecal-occult-blood-test-codes.html)):
+- **Qualitative** (LOINC 80372-6) -- rapid immunoassay, result: detected / not detected (from [FOBT Qualitative Result](ValueSet-fecal-occult-blood-qualitative-result.html))
+- **Quantitative** (LOINC 27396-1) -- immunochemical measurement in microg/l
 
-If colonoscopic bleeding occurs, the therapeutic procedure may be documented as [colonoscopic control of colon bleeding](Procedure-procedure-colonoscopy-colon-bleeding-example.html). Additional procedures performed under this indication may include [closure by clip](Procedure-procedure-colonoscopy-bleed-clip-example.html), [injection of epinephrine](Procedure-procedure-colonoscopy-bleed-epinephrine-example.html).
+A stool specimen is collected and documented. If FOBT is negative, the patient is re-invited after 2 years. If FOBT is positive (blood detected), the patient is referred for colonoscopy.
 
-When colon wall injury occurs, additional structured information may describe the severity of the injury and the clinical management. The injury may be classified according to the Sydney deep mural injury classification and documented together with the action taken. Possible combinations include examples of [Sydney DMI type III with clipping](Observation-observation-colonoscopy-wall-injury-clip-type3-example.html), [Sydney DMI type IV with suturing](Observation-observation-colonoscopy-wall-injury-suture-type4-example.html), [Sydney DMI type V with operative management](Observation-observation-colonoscopy-wall-injury-operation-type5-example.html).
+**Examples**:
+- [FOBT Not Detected](Observation-observation-fobt-qualitative-not-detected-example.html)
+- [FOBT Detected](Observation-observation-fobt-qualitative-detected-example.html)
+- [FOBT Quantitative](Observation-observation-fobt-quantitative-example.html)
+- [Stool Specimen](Specimen-specimen-stool-fobt-example.html)
 
-During the examination, the clinician may identify and evaluate colon polyps. A detected polyp is documented as a [colon polyp finding](Observation-observation-polyp-found-example.html), which captures the anatomical location, polyp size, and detailed morphological assessments including the Paris classification, NICE classification, and an endoscopic prediction of histology. The accessibility of the polyp is also evaluated, allowing the system to calculate the SMSA (Size, Morphology, Site, Access) score and level.
+---
 
-During the procedure, if neoplastic changes are identified, they are recorded as a [tumor found](Observation-observation-tumor-found-example.html) observation. This includes the precise anatomical location from the shared colorectal anatomy value set, clinical descriptions for the official report, and private clinic notes. If a biopsy of the tumor is planned but cannot be completed, it is documented as a [postponed tumor biopsy](Procedure-procedure-tumor-biopsy-postponed-example.html).
+#### 2. Colonoscopic Examination
 
-To complete the clinical report, the clinician formulates a final summary. The overarching diagnosis is selected from a standardized value set—[Colorectal Diagnostic Conclusions](ValueSet-colorectal-conclusion-lt-colorectal.html)—which allows for structured searching and multiple selections. If no abnormalities are found, the conclusion is documented as [colonoscopy normal](Observation-observation-conclusion-normal-example.html). If findings are present, the primary condition is selected and additional details are documented as free text, such as a conclusion noting [polyps and diverticulosis](Observation-observation-conclusion-polyps-example.html).
+Patients with positive FOBT are referred for diagnostic colonoscopy. The colonoscopy examination documents the procedure, bowel preparation quality, anatomical reach, findings (polyps, tumors), complications, and conclusions.
 
-The complete colorectal cancer prevention programme form may also be represented as a [colonoscopy questionnaire](Questionnaire-questionnaire-colonoscopy-espbi.html). This structured form brings together the information recorded throughout the workflow, including [fecal occult blood test results](DiagnosticReport-diagnosticreport-fobt-qualitative-not-detected-example.html), [stool specimen details](Specimen-specimen-stool-fobt-example.html), bowel preparation quality and Boston Bowel Preparation Scale scores such as [inadequate bowel preparation](Observation-observation-bowel-prep-inadequate-example.html) and [BBPS transverse colon score](Observation-observation-bbps-transverse-colon-example.html), targeted dietary recommendations, written preparation instructions, split-dose preparation, bowel preparation products used, procedural details such as [colonoscopy anesthesia procedure](Procedure-procedure-colonoscopy-with-anesthesia-example.html) and [cecum reached](Observation-observation-colonoscope-reach-cecum-example.html), findings such as [tumor found](Observation-observation-tumor-found-example.html), interventions such as [postponed tumor biopsy](Procedure-procedure-tumor-biopsy-postponed-example.html), complications such as [complication present after diagnostic colonoscopy](Observation-observation-colonoscopy-complication-presence-yes-example.html), histology links, [diagnostic conclusion](ValueSet-colorectal-conclusion-lt-colorectal.html), and follow-up recommendation. A completed [questionnaire response](QuestionnaireResponse-questionnaireresponse-colonoscopy-espbi-example.html) demonstrates how the full pathway can be documented in a single structured clinical document.
+##### 2.1 Colonoscopy Procedure
 
-Together, these resources reflect the clinical pathway of the colorectal cancer prevention program from the first screening step to the final diagnostic evaluation. The process begins with fecal occult blood testing using a stool sample, followed by referral for colonoscopy when the screening result is abnormal. Before the colonoscopy, patient preparation such as dietary recommendations, written instructions, and bowel preparation methods may be documented. During the colonoscopy examination the bowel preparation, use of anesthesia, inspected intestinal segments, and possible findings such as polyps, tumors, or other abnormalities are documented. If lesions are detected, biopsies or polypectomy may be performed and the collected samples are sent for histological examination. After the procedure, any complications and their management are recorded, and the histological results are used to establish the final diagnosis and complete the diagnostic workflow.
+The colonoscopy is recorded as a [Colonoscopy Procedure](StructureDefinition-colonoscopy-procedure-lt-colorectal.html). Key data elements include:
+- Whether the procedure was performed with or without anesthesia
+- Whether a video colonoscope was used
+- Withdrawal time
+- Whether the colonoscopy was postponed
+
+**Examples**:
+- [Colonoscopy without anesthesia](Procedure-procedure-colonoscopy-no-anesthesia-example.html)
+- [Colonoscopy with anesthesia](Procedure-procedure-colonoscopy-with-anesthesia-example.html)
+
+##### 2.2 Colonoscope Reach
+
+The endoscopist documents the most distal anatomical segment reached using the [Colonoscope Reach](StructureDefinition-colonoscope-reach-lt-colorectal.html) profile.
+
+The [Colonoscope Reach ValueSet](ValueSet-colonoscope-reach.html) includes anatomical sites from terminal ileum through to the anal canal. This data is used to calculate the **caecum intubation rate** quality indicator.
+
+**Examples**:
+- [Cecum reach](Observation-observation-colonoscope-reach-cecum-example.html)
+- [Terminal ileum reach](Observation-observation-colonoscope-reach-ileum-example.html)
+
+##### 2.3 Bowel Preparation Assessment
+
+Bowel preparation quality directly affects mucosal visualization and is assessed using the [Bowel Preparation Quality](StructureDefinition-bowel-preparation-quality-lt-colorectal.html) profile with the Boston Bowel Preparation Scale (BBPS).
+
+The profile captures:
+- Overall quality: effective, inadequate, or not done (from [Bowel Preparation Quality VS](ValueSet-bowel-preparation-quality.html))
+- BBPS segment scores (0--3 each) for left colon, transverse colon, and right colon (from [BBPS Score Values](ValueSet-bowel-prep-score-values.html))
+- Total BBPS score (0--9): quality is poor when < 6 points, or when at least one segment scores 0 or 1
+
+Additional preparation details may be documented:
+- Substances used (from [Bowel Preparation Substances](ValueSet-bowel-preparation-substance.html)): Macrogol 4000, Macrogol 3350, sodium picosulfate combination, sodium sulfate
+- Whether the patient received written information about preparation
+- Whether split-dose preparation was used
+- Whether targeted dietary recommendations were given (for poor preparation)
+
+**Examples**:
+- [Effective bowel preparation](Observation-observation-bowel-prep-effective-example.html)
+- [Inadequate bowel preparation](Observation-observation-bowel-prep-inadequate-example.html)
+- [BBPS left colon score](Observation-observation-bbps-left-colon-example.html)
+
+##### 2.4 Polyp Findings
+
+Individual polyps are documented using the [Polyp Finding](StructureDefinition-polyp-finding-lt-colorectal.html) profile with components for:
+- **Location** -- anatomical site with SMSA scoring (2 points for proximal, 1 point for distal)
+- **Paris classification** -- morphological type (from [Paris Classification VS](ValueSet-paris-classification.html)): Is, ISP, IP, IIa, IIb, IIc, and LST subtypes
+- **NICE classification** -- endoscopic histology prediction (from [NICE Classification VS](ValueSet-nice-classification.html)): Type I (hyperplastic), Type II (adenoma), Type III (invasive cancer)
+- **Size** -- largest dimension in mm
+- **Access to polyp** -- Easy or Heavy (from [Polyp Access VS](ValueSet-polyp-access.html))
+- **SMSA score** -- calculated composite score from location + Paris + size + access
+- **Predicted histology** -- hyperplastic, SSL, adenoma, or adenoma with suspicion of malignancy (from [Polyp Predicted Histology VS](ValueSet-polyp-predicted-histology.html))
+
+Photo documentation is linked via `derivedFrom` references to Media/DocumentReference resources (minimum 2 photos per polyp: white light and chromoendoscopy).
+
+When a polyp is removed, a [Polypectomy Procedure](StructureDefinition-polypectomy-procedure-lt-colorectal.html) is recorded with details about the removal method (from [Polypectomy Method VS](ValueSet-polypectomy-method.html)): snare loop, pliers, hot/cold method, en bloc or in parts, and hydropreparation technique.
+
+If the polyp is sent for histological examination, the biopsy procedure, sample number, and pathology response are tracked. The **adenoma detection rate** quality indicator is calculated from pathology results.
+
+**Examples**:
+- [Polyp found](Observation-observation-polyp-found-example.html)
+- [Polypectomy](Procedure-procedure-polypectomy-example.html)
+
+##### 2.5 Tumor Findings
+
+Tumors identified during colonoscopy are documented using the [Tumor Finding](StructureDefinition-tumor-finding-lt-colorectal.html) profile, capturing the anatomical location and free-text description. Tumor biopsy is performed using `BiopsyProcedureLtLab` from the Lab IG, with samples sent for histological examination.
+
+**Examples**:
+- [Tumor found](Observation-observation-tumor-found-example.html)
+- [Tumor biopsy postponed](Procedure-procedure-tumor-biopsy-postponed-example.html)
+
+##### 2.6 Complications
+
+Complications are documented at two levels:
+
+1. **Complication presence** -- [Colonoscopy Complication Presence](StructureDefinition-colonoscopy-complication-presence-lt-colorectal.html) records whether any complication occurred (Yes/No)
+
+2. **Complication type** -- [Colonoscopy Complication Type](StructureDefinition-colonoscopy-complication-type-lt-colorectal.html) records the specific complication: hemorrhage of colon, complication of anesthesia, accidental organ perforation, or perforation of large intestine
+
+3. **Wall integrity violation** -- [Colonoscopy Wall Injury Detail](StructureDefinition-colonoscopy-wall-injury-detail-lt-colorectal.html) documents wall damage using the Sydney deep mural injury classification (Types I--V from [Sydney Classification VS](ValueSet-sydney-classification.html)) and the action taken (clipping, suturing, or primary operation from [Wall Injury Action VS](ValueSet-colonoscopy-wall-injury-action.html))
+
+4. **Bleeding control** -- [Colonoscopy Bleeding Control](StructureDefinition-colonoscopy-bleeding-control-lt-colorectal.html) documents interventions such as adrenaline injection or clipping
+
+**Examples**:
+- [No complication](Observation-observation-colonoscopy-complication-presence-no-example.html)
+- [Hemorrhage complication](Observation-observation-colonoscopy-complication-hemorrhage-example.html)
+- [Wall injury Type III with clipping](Observation-observation-colonoscopy-wall-injury-clip-type3-example.html)
+- [Bleeding control with clip](Procedure-procedure-colonoscopy-bleed-clip-example.html)
+
+##### 2.7 Conclusions
+
+The colonoscopy conclusion is documented using [Colonoscopy Conclusion](StructureDefinition-colonoscopy-conclusion-lt-colorectal.html) with a coded finding from the [Colorectal Conclusion VS](ValueSet-colorectal-conclusion.html), which includes approximately 30 SNOMED-coded findings: normal colonoscopy, polyps, malignant tumor, inflammatory bowel disease (ulcerative colitis, Crohn's disease), ischemic colitis, diverticulosis, hemorrhoids, bleeding of unknown origin, angiectasia, and others.
+
+**Examples**:
+- [Normal conclusion](Observation-observation-conclusion-normal-example.html)
+- [Polyps and diverticulosis conclusion](Observation-observation-conclusion-polyps-example.html)
+
+---
+
+#### 3. Pathological Histological Examination
+
+Tissue specimens collected during colonoscopy (from biopsy or polypectomy) are sent for histological examination. This stage reuses profiles from the [Laboratory IG](https://build.fhir.org/ig/HL7LT/ig-lt-lab/) for specimen management, tumor measurement, and pathology reporting, with colorectal-specific extensions.
+
+##### 3.1 Specimen and Pre-Analytic Data
+
+Specimens are documented using [SpecimenLtLab](https://build.fhir.org/ig/HL7LT/ig-lt-lab/StructureDefinition-specimen-lt-lab.html) with container number, type of material (polypectomy/biopsy), and localization from the endoscopy. Tissue blocks are tracked using [SpecimenBlockLtLab](https://build.fhir.org/ig/HL7LT/ig-lt-lab/StructureDefinition-specimen-block-lt-lab.html). Specimen quality is assessed using [SpecimenAdequacyLtLab](https://build.fhir.org/ig/HL7LT/ig-lt-lab/StructureDefinition-specimen-adequacy-lt-lab.html): sufficient for research, limited informativeness, or insufficient.
+
+##### 3.2 Macroscopic Examination
+
+The largest dimension of the tissue fragment is recorded using [SpecimenMeasurementLtLab](https://build.fhir.org/ig/HL7LT/ig-lt-lab/StructureDefinition-specimen-measurement-lt-lab.html). Additional macroscopic findings are captured as free text.
+
+##### 3.3 Histological Diagnosis
+
+The colorectal-specific [Histological Diagnosis](StructureDefinition-histological-diagnosis-lt-colorectal.html) profile captures the structured diagnosis with components for:
+
+**Non-invasive processes** (from [Histological Diagnosis VS](ValueSet-colorectal-histological-diagnosis.html)):
+- Conventional adenoma: tubular, tubulovillous, villous
+- Serrated polyps: hyperplastic polyp (HP), sessile serrated lesion (SSL), SSL with dysplasia, traditional serrated adenoma (TSA)
+- Other polyps, benign non-epithelial tumors (lipoma, leiomyoma), ulcer, colitis
+
+**Malignant tumors**:
+- Primary carcinoma: adenocarcinoma (NOS, mucinous, signet ring, medullary, serrated, micropapillary, adenosquamous, undifferentiated, pseudosarcomatous)
+- Other: neuroendocrine carcinoma (NEC), neuroendocrine tumor (NET), GIST, melanoma, lymphoma, sarcoma, metastases
+
+**Additional assessment components**:
+- **Dysplasia grade** (from [Dysplasia Grade VS](ValueSet-dysplasia-grade.html)): no dysplasia, low grade, high grade / pTis
+- **Radicalism of removal** (from [Radicalism of Removal VS](ValueSet-radicalism-of-removal.html)): R0 (clear margins), R1 (involved margins), RX (cannot be assessed), not applicable
+- **Tumor budding** (from [Tumor Budding VS](ValueSet-tumor-budding.html)): Bd0, Bd1 (1--4/20X), Bd2 (5--9/20X), Bd3 (10+/20X)
+- **Invasion depth** (from [Invasion Depth VS](ValueSet-invasion-depth.html)): Haggitt 0--4, Kikuchi Sm1--Sm3
+- **MMRP expression** (from [MMRP Expression VS](ValueSet-mmrp-expression.html)): normal (MSS), loss of expression (MSI), invaluable, postponed
+- **Intravascular invasion**: assessed using LymphovascularInvasionVS from Lab IG
+
+##### 3.4 Molecular Research
+
+Molecular testing for microsatellite instability (MSI), KRAS, NRAS, and BRAF V600E mutations is indicated for adenocarcinoma. These tests use KLTN codes (XLT00915-2, XLT00914-5) and are documented as separate observations. *TODO: dedicated molecular testing profiles will be added in a future version.*
+
+##### 3.5 Pathology Report
+
+The synoptic pathology report follows the [Pathology Composition](https://build.fhir.org/ig/HL7LT/ig-lt-lab/StructureDefinition-pathology-composition-lt-lab.html) structure from the Laboratory IG, organized into four LOINC-coded sections:
+
+1. **Pre-Analytic** (LOINC 22636-5): clinical context, service request, procedure, and submitted specimens
+2. **Macroscopic** (LOINC 74574-5): gross specimen measurements, specimen adequacy, paraffin blocks
+3. **Microscopic** (LOINC 660-1): histological diagnosis, grading, invasion assessment
+4. **Synthesis** (LOINC 22637-3): final diagnosis with ICD-10 and ICD-O-3 coding
+
+The final [Pathology Report](https://build.fhir.org/ig/HL7LT/ig-lt-lab/StructureDefinition-pathology-report-lt-lab.html) includes mandatory ICD-10 coding and optional ICD-O-3 morphology coding in `conclusionCode`.
+
+---
+
+#### 4. Screening Episode Composition
+
+All colonoscopy results are linked into a single structured document -- the [Colonoscopy Composition](StructureDefinition-colonoscopy-composition-lt-colorectal.html).
+
+The composition sections include:
+- **Procedure** -- colonoscopy procedure, polypectomy procedures, bleeding control procedures
+- **Findings** -- colonoscope reach, bowel preparation quality, polyp findings, tumor findings, complication presence and type, wall injury details
+- **Conclusions** -- colonoscopy conclusion observations
+- **Histopathology** -- references to Pathology Reports from the Lab IG
+- **Lifestyle Factors** -- cross-IG references to [Lifestyle IG](https://build.fhir.org/ig/HL7LT/ig-lt-lifestyle/) (tobacco use, alcohol consumption, nutrition)
+- **Vital Signs** -- cross-IG references to [VitalSigns IG](https://build.fhir.org/ig/HL7LT/ig-lt-vitalsigns/) (BMI)
+
+The composition is wrapped by the [Colonoscopy Report](StructureDefinition-colonoscopy-report-lt-colorectal.html) which aggregates all structured results.
+
+---
+
+#### Quality Indicators
+
+The screening programme defines the following quality indicators, computable from the structured data:
+
+| Indicator | Denominator | Numerator |
+|-----------|------------|-----------|
+| Caecum intubation rate | All screening colonoscopies | Procedures where colonoscope reached cecum or terminal ileum |
+| Quality of bowel preparation | Patients who underwent screening | Patients with BBPS total score >= 6 |
+| Adenoma Detection Rate | Total screening colonoscopies | Procedures where at least one adenoma was found (from pathology) |
+| Proper Polypectomy Technique | Polyps > 3mm removed during endoscopy | Polyps removed with a snare loop |
+| Early complications rate | Screening colonoscopies | Bleeding and wall integrity damage during colonoscopy |
+| 7-day hospitalization rate | Screening colonoscopies | Hospitalizations within 7 days after colonoscopy |
+| Mortality rate | Screening colonoscopies | Deaths within 30 days after colonoscopy |
+| Interval cancer rate | Screening colonoscopies | Colorectal cancer occurrence within 10 years |

@@ -1,30 +1,6 @@
 // ══════════════════════════════════════════════════════════════════════════
-// Narrative mapping -- QuestionnaireResponse -> FHIR profiles/examples
-// ══════════════════════════════════════════════════════════════════════════
-// Group 1 (basicInfo)       -> Patient (PatientLt), Encounter
-// Group 2 (bowelPrep)       -> Observation (BowelPreparationQuality examples)
-//   bbpsScoring             -> Observation (Boston Bowel Prep Scale examples)
-//   dietaryRecommendations  -> Observation (dietary-recommendations examples)
-//   splitDose               -> Observation (split-dose examples)
-//   writtenInfo             -> Observation (written-information examples)
-// Group 3 (scopeReach)      -> ObservationColonoscopeReachLtColorectal
-//   See: ColonoscopeReachLtColorectalVS
-// Group 4 (polypFindings)   -> Observation (colon-polyps examples)
-//   location               -> ColorectalAnatomyLtColorectalVS
-//   Paris classification   -> Paris endoscopic classification
-//   NICE classification    -> NICE classification (Type I-III)
-//   SMSA score             -> SMSA polypectomy difficulty
-//   predicted histology    -> hyperplastic, SSL, adenoma
-// Group 5 (tumorFindings)   -> Observation (tumor examples)
-// Group 6 (complications)   -> ObservationColonoscopyComplicationPresenceLtColorectal
-//                           -> ObservationColonoscopyComplicationTypeLtColorectal
-//                           -> ObservationColonoscopyWallInjuryDetailLtColorectal
-// Group 7 (conclusions)     -> Observation (conclusions examples)
-// Group 8 (recommendations) -> CarePlan / text
-// Group 9 (signatures)      -> Practitioner
-// See also:
-//   https://build.fhir.org/ig/HL7LT/ig-lt-lifestyle/ (tobacco, nutrition)
-//   https://build.fhir.org/ig/HL7LT/ig-lt-vitalsigns/ (BMI, blood pressure)
+// Narrative mapping -- QuestionnaireResponse -> FHIR profiles
+// See questionnaire-colonoscopy-espbi.fsh for full mapping details
 // ══════════════════════════════════════════════════════════════════════════
 
 Instance: questionnaireresponse-colonoscopy-espbi-example

@@ -1,5 +1,5 @@
 Instance: observation-colonoscope-reach-cecum-example
-InstanceOf: ObservationColonoscopeReachLtColorectal
+InstanceOf: ColonoscopeReachLtColorectal
 Usage: #example
 Title: "Observation: Colonoscope Reach Cecum (example)"
 Description: "Example of an observation recording that the colonoscope reached the Cecum."
@@ -12,7 +12,7 @@ Description: "Example of an observation recording that the colonoscope reached t
 * valueCodeableConcept = $sct#32713005 "Cecum structure (body structure)"
 
 Instance: observation-colonoscope-reach-ileum-example
-InstanceOf: ObservationColonoscopeReachLtColorectal
+InstanceOf: ColonoscopeReachLtColorectal
 Usage: #example
 Title: "Observation: Colonoscope Reach Terminal Ileum (example)"
 Description: "Example of an observation recording that the colonoscope reached the Terminal ileum."

@@ -15,7 +15,7 @@ Description: "Diagnostic report representing a fecal occult blood test examinati
 * encounter only Reference(EncounterLt)
 
 * code 1..1
-* code from FecalOccultBloodTestCodesLtColorectal (required)
+* code from FecalOccultBloodTestCodesVS (required)
 
 * effective[x] 1..1
 * effective[x] only dateTime

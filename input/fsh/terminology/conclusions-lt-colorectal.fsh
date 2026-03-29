@@ -1,7 +1,8 @@
-ValueSet: ColorectalConclusionLtColorectal
-Id: colorectal-conclusion-lt-colorectal
-Title: "Colorectal - Diagnostic Conclusions VS"
+ValueSet: ColorectalConclusionVS
+Id: colorectal-conclusion
+Title: "Colorectal Conclusion"
 Description: "SNOMED CT codes representing the final diagnostic conclusions of the colonoscopy."
+* ^url = $colorectal-conclusion-vs-url
 * ^status = #active
 * ^experimental = false
 * ^publisher = "HL7 Lithuania"

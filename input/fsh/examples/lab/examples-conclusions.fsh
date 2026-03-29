@@ -1,3 +1,6 @@
+// ValueSet moved to terminology/colorectal-conclusion-lt-colorectal.fsh as ColorectalConclusionVS
+
+
 Instance: observation-conclusion-normal-example
 InstanceOf: ObservationLt
 Usage: #example

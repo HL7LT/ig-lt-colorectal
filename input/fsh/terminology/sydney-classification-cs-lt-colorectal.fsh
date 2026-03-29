@@ -1,8 +1,8 @@
-CodeSystem: SydneyClassificationCsLtColorectal
-Id: sydney-classification-cs-lt-colorectal
-Title: "Colorectal - Sydney Classification for Colon Wall Injury"
+CodeSystem: SydneyClassificationCS
+Id: sydney-classification-cs
+Title: "Sydney Classification for Colon Wall Injury"
 Description: "Sydney classification for deep mural injury (DMI) of the colon occurring during colonoscopy. The classification describes the severity of injury to the colon wall layers and helps guide appropriate management."
-* ^url = $sydney-classification-cs-lt-colorectal-url
+* ^url = $sydney-classification-cs-url
 * ^status = #active
 * ^experimental = false
 * ^publisher = "HL7 Lithuania"

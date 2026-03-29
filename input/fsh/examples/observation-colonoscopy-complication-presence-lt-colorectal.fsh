@@ -1,5 +1,5 @@
 Instance: observation-colonoscopy-complication-presence-no-example
-InstanceOf: ObservationDiagnosticColonoscopyComplicationPresenceLtColorectal
+InstanceOf: ColonoscopyComplicationPresenceLtColorectal
 Usage: #example
 Title: "Observation: Diagnostic Colonoscopy Complication Presence No (example)"
 Description: "Example of an observation recording that no complication occurred after diagnostic colonoscopy."
@@ -12,7 +12,7 @@ Description: "Example of an observation recording that no complication occurred 
 * valueCodeableConcept = $sct#373067005 "No (qualifier value)"
 
 Instance: observation-colonoscopy-complication-presence-yes-example
-InstanceOf: ObservationDiagnosticColonoscopyComplicationPresenceLtColorectal
+InstanceOf: ColonoscopyComplicationPresenceLtColorectal
 Usage: #example
 Title: "Observation: Diagnostic Colonoscopy Complication Presence Yes (example)"
 Description: "Example of an observation recording that a complication occurred after diagnostic colonoscopy."
