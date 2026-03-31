@@ -1,15 +1,4 @@
-ValueSet: PolypPredictedHistologyVS
-Id: polyp-predicted-histology
-Title: "Colorectal - Polyp Predicted Histology VS"
-Description: "Endoscopic prediction of polyp histology using virtual chromoendoscopy."
-* ^status = #active
-* ^experimental = false
-* ^publisher = "HL7 Lithuania"
-
-* $sct#721691004 "Hyperplastic polyp of large intestine (disorder)"
-* $sct#1230009008 "Sessile serrated polyp of colon (disorder)"
-* $sct#399432003 "Adenoma of large intestine (disorder)"
-* $sct#162572001 "Suspected malignancy (situation)"
+// PolypPredictedHistologyVS moved to input/fsh/terminology/polyp-predicted-histology-lt-colorectal.fsh
 
 Profile: ObservationPolypLtColorectal
 Parent: ObservationLt

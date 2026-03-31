@@ -10,3 +10,4 @@ Description: "Grades of dysplasia for histological assessment in colorectal path
 * $sct#25723000 "Dysplasia (morphologic abnormality)"
 * $sct#43185009 "Mild dysplasia (morphologic abnormality)"
 * $sct#55237006 "Severe dysplasia (morphologic abnormality)"
+* $sct#260413007 "Not applicable (qualifier value)"

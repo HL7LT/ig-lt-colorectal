@@ -90,6 +90,26 @@ Description: "ESPBI form for colonoscopy in the Lithuanian colorectal cancer scr
 * item[=].item[=].text = "Procedure date"
 * item[=].item[=].type = #dateTime
 
+* item[=].item[+].linkId = "basicInfo.retroflexionRectum"
+* item[=].item[=].text = "Retroflexion in the rectum"
+* item[=].item[=].type = #coding
+* item[=].item[=].answerOption[+].valueCoding = $sct#373066001 "Yes"
+* item[=].item[=].answerOption[+].valueCoding = $sct#373067005 "No"
+* item[=].item[=].answerOption[+].valueCoding = $sct#48031000087101 "Postponed"
+
+* item[=].item[+].linkId = "basicInfo.previousAbdominalSurgery"
+* item[=].item[=].text = "History of major abdominal surgery"
+* item[=].item[=].type = #coding
+* item[=].item[=].answerOption[+].valueCoding = $sct#373066001 "Yes"
+* item[=].item[=].answerOption[+].valueCoding = $sct#373067005 "No"
+
+* item[=].item[+].linkId = "basicInfo.previousAbdominalSurgeryDetails"
+* item[=].item[=].text = "Previous abdominal surgery details"
+* item[=].item[=].type = #text
+* item[=].item[=].enableWhen[+].question = "basicInfo.previousAbdominalSurgery"
+* item[=].item[=].enableWhen[=].operator = #=
+* item[=].item[=].enableWhen[=].answerCoding = $sct#373066001 "Yes"
+
 // ────────────────────────────────────────────────────────────────────────
 // Group 2: Bowel preparation assessment
 // ────────────────────────────────────────────────────────────────────────
@@ -130,6 +150,16 @@ Description: "ESPBI form for colonoscopy in the Lithuanian colorectal cancer scr
 * item[=].item[=].type = #coding
 * item[=].item[=].answerOption[+].valueCoding = $sct#373066001 "Yes"
 * item[=].item[=].answerOption[+].valueCoding = $sct#373067005 "No"
+
+* item[=].item[+].linkId = "bowelPrep.prepMethod"
+* item[=].item[=].text = "Preparation method"
+* item[=].item[=].type = #coding
+* item[=].item[=].answerOption[+].valueCoding.display = "Two-day split preparation"
+* item[=].item[=].answerOption[+].valueCoding.display = "Same-day non-split preparation"
+
+* item[=].item[+].linkId = "bowelPrep.lastDoseHoursBeforeProcedure"
+* item[=].item[=].text = "Last dose timing (hours before procedure)"
+* item[=].item[=].type = #integer
 
 * item[=].item[+].linkId = "bowelPrep.writtenInfo"
 * item[=].item[=].text = "Was written information about preparation given?"
@@ -268,6 +298,37 @@ Description: "ESPBI form for colonoscopy in the Lithuanian colorectal cancer scr
 * item[=].item[=].answerOption[+].valueCoding.display = "EMR"
 * item[=].item[=].answerOption[+].valueCoding.display = "ESD"
 * item[=].item[=].answerOption[+].valueCoding.display = "Piecemeal EMR"
+
+* item[=].item[+].linkId = "polypFindings.lumenFilling"
+* item[=].item[=].text = "Lumen filling method"
+* item[=].item[=].type = #coding
+* item[=].item[=].enableWhen[+].question = "polypFindings.polypRemoved"
+* item[=].item[=].enableWhen[=].operator = #=
+* item[=].item[=].enableWhen[=].answerCoding = $sct#373066001 "Yes"
+* item[=].item[=].answerOption[+].valueCoding.display = "Air insufflation"
+* item[=].item[=].answerOption[+].valueCoding.display = "Water immersion"
+* item[=].item[=].answerOption[+].valueCoding.display = "CO2 insufflation"
+
+* item[=].item[+].linkId = "polypFindings.resectionType"
+* item[=].item[=].text = "Resection type"
+* item[=].item[=].type = #coding
+* item[=].item[=].enableWhen[+].question = "polypFindings.polypRemoved"
+* item[=].item[=].enableWhen[=].operator = #=
+* item[=].item[=].enableWhen[=].answerCoding = $sct#373066001 "Yes"
+* item[=].item[=].answerOption[+].valueCoding.display = "En bloc resection"
+* item[=].item[=].answerOption[+].valueCoding.display = "Piecemeal resection"
+
+* item[=].item[+].linkId = "polypFindings.hydropreparation"
+* item[=].item[=].text = "Hydropreparation substances used"
+* item[=].item[=].type = #coding
+* item[=].item[=].repeats = true
+* item[=].item[=].enableWhen[+].question = "polypFindings.polypRemoved"
+* item[=].item[=].enableWhen[=].operator = #=
+* item[=].item[=].enableWhen[=].answerCoding = $sct#373066001 "Yes"
+* item[=].item[=].answerOption[+].valueCoding.display = "Normal saline"
+* item[=].item[=].answerOption[+].valueCoding.display = "Adrenaline"
+* item[=].item[=].answerOption[+].valueCoding.display = "Methylene blue"
+* item[=].item[=].answerOption[+].valueCoding.display = "Gelofusine"
 
 * item[=].item[+].linkId = "polypFindings.complicationAfterRemoval"
 * item[=].item[=].text = "Complication after polyp removal?"

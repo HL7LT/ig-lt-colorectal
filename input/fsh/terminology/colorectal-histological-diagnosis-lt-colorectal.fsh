@@ -39,6 +39,10 @@ Description: "Histological diagnosis categories for pathological examination in 
 // Other malignant tumors
 * $sct#1286767006 "Neuroendocrine carcinoma (morphologic abnormality)"
 * $sct#1286768001 "Well-differentiated neuroendocrine tumor (morphologic abnormality)"
+* $sct#1286769009 "Well-differentiated neuroendocrine tumor grade 1 (morphologic abnormality)"
+* $sct#1286770005 "Well-differentiated neuroendocrine tumor grade 2 (morphologic abnormality)"
+* $sct#1286772002 "Well-differentiated neuroendocrine tumor grade 3 (morphologic abnormality)"
+* $sct#785766008 "Mixed neuroendocrine-non neuroendocrine neoplasm (morphologic abnormality)"
 * $sct#128756002 "Gastrointestinal stromal sarcoma (morphologic abnormality)"
 * $sct#1162635006 "Malignant melanoma (morphologic abnormality)"
 * $sct#1163043007 "Malignant lymphoma (morphologic abnormality)"

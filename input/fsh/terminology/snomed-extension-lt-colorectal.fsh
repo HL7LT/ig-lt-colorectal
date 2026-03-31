@@ -108,3 +108,55 @@ Description: "Extension CodeSystem for concepts used in the Lithuanian colorecta
 * #kikuchi-sm2 "Sm2 according to Kikuchi"
 * #kikuchi-sm3 "Sm3 according to Kikuchi"
 * #invasion-invaluable "Invasion depth invaluable"
+
+// Bowel preparation method
+* #prep-split-two-day "Two-day split preparation"
+* #prep-split-two-day ^definition = "Two-day split-dose bowel preparation protocol"
+* #prep-same-day "Same-day non-split preparation"
+* #prep-same-day ^definition = "Same-day non-split bowel preparation protocol"
+
+// Polypectomy instrument
+* #polypectomy-snare "Snare/loop"
+* #polypectomy-snare ^definition = "Polypectomy performed using a snare or loop"
+* #polypectomy-forceps "Forceps"
+* #polypectomy-forceps ^definition = "Polypectomy performed using forceps"
+
+// Polypectomy technique
+* #polypectomy-hot "Hot technique"
+* #polypectomy-hot ^definition = "Polypectomy using electrocautery (hot)"
+* #polypectomy-cold "Cold technique"
+* #polypectomy-cold ^definition = "Polypectomy without electrocautery (cold)"
+
+// Resection type
+* #resection-en-bloc "En bloc resection"
+* #resection-en-bloc ^definition = "Complete removal of lesion in one piece"
+* #resection-piecemeal "Piecemeal resection"
+* #resection-piecemeal ^definition = "Removal of lesion in multiple fragments"
+
+// Lumen filling
+* #lumen-air "Air insufflation"
+* #lumen-air ^definition = "Colonic lumen distension using air"
+* #lumen-water "Water immersion"
+* #lumen-water ^definition = "Colonic lumen distension using water"
+* #lumen-co2 "CO2 insufflation"
+* #lumen-co2 ^definition = "Colonic lumen distension using carbon dioxide"
+
+// Hydropreparation substances
+* #hydro-saline "Normal saline"
+* #hydro-saline ^definition = "Submucosal injection of normal saline for lesion lifting"
+* #hydro-adrenaline "Adrenaline"
+* #hydro-adrenaline ^definition = "Submucosal injection of adrenaline for lesion lifting"
+* #hydro-methylene-blue "Methylene blue"
+* #hydro-methylene-blue ^definition = "Submucosal injection of methylene blue for lesion lifting"
+* #hydro-gelofusine "Gelofusine"
+* #hydro-gelofusine ^definition = "Submucosal injection of Gelofusine for lesion lifting"
+
+// Bleeding control methods
+* #bleeding-clip "Hemostatic clipping"
+* #bleeding-clip ^definition = "Bleeding control using hemostatic clips"
+* #bleeding-adrenaline-injection "Adrenaline injection"
+* #bleeding-adrenaline-injection ^definition = "Bleeding control using local adrenaline injection"
+* #bleeding-coagulation "Thermal coagulation"
+* #bleeding-coagulation ^definition = "Bleeding control using thermal coagulation"
+* #bleeding-other "Other bleeding control method"
+* #bleeding-other ^definition = "Other method of bleeding control not specified above"

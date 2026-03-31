@@ -103,6 +103,18 @@ parameters:
     - https://tx.hl7.lt/fhir/ValueSet/radicalism-of-removal
     - https://tx.hl7.lt/fhir/ValueSet/sydney-classification
     - https://tx.hl7.lt/fhir/ValueSet/tumor-budding
+    - https://tx.hl7.lt/fhir/ValueSet/polyp-predicted-histology
+    - https://tx.hl7.lt/fhir/ValueSet/bowel-prep-method
+    - https://tx.hl7.lt/fhir/ValueSet/polypectomy-instrument
+    - https://tx.hl7.lt/fhir/ValueSet/polypectomy-technique
+    - https://tx.hl7.lt/fhir/ValueSet/resection-type
+    - https://tx.hl7.lt/fhir/ValueSet/lumen-filling
+    - https://tx.hl7.lt/fhir/ValueSet/hydropreparation-substance
+    - https://tx.hl7.lt/fhir/ValueSet/bleeding-control-method
+    - https://tx.hl7.lt/fhir/ValueSet/pdc-grade
+    - https://tx.hl7.lt/fhir/ValueSet/intravascular-invasion
+    - https://tx.hl7.lt/fhir/ValueSet/degree-of-differentiation
+    - https://tx.hl7.lt/fhir/ValueSet/scc-grading
 
   excludettl: true
   shownav: true

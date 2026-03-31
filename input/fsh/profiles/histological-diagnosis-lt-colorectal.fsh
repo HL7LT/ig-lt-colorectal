@@ -22,7 +22,11 @@ Description: "Profile for recording histological diagnosis results from polyp or
     radicalismOfRemoval 0..1 MS and
     tumorBudding 0..1 MS and
     invasionDepth 0..1 MS and
-    mmrpExpression 0..1 MS
+    mmrpExpression 0..1 MS and
+    pdcGrade 0..1 MS and
+    intravascularInvasion 0..1 MS and
+    differentiationGrade 0..1 MS and
+    sccGrade 0..1 MS
 
 * component[histologicalType].code.text = "Histological diagnosis"
 * component[histologicalType].value[x] only CodeableConcept
@@ -53,3 +57,23 @@ Description: "Profile for recording histological diagnosis results from polyp or
 * component[mmrpExpression].value[x] only CodeableConcept
 * component[mmrpExpression].valueCodeableConcept from MmrpExpressionVS (required)
 * component[mmrpExpression] ^short = "Mismatch repair protein (MMRp) expression status"
+
+* component[pdcGrade].code.text = "Poorly differentiated clusters"
+* component[pdcGrade].value[x] only CodeableConcept
+* component[pdcGrade].valueCodeableConcept from PdcGradeVS (required)
+* component[pdcGrade] ^short = "PDC grade (poorly differentiated clusters)"
+
+* component[intravascularInvasion].code.text = "Intravascular invasion"
+* component[intravascularInvasion].value[x] only CodeableConcept
+* component[intravascularInvasion].valueCodeableConcept from IntravascularInvasionVS (required)
+* component[intravascularInvasion] ^short = "Vascular invasion status"
+
+* component[differentiationGrade].code.text = "Degree of differentiation"
+* component[differentiationGrade].value[x] only CodeableConcept
+* component[differentiationGrade].valueCodeableConcept from DegreeOfDifferentiationVS (required)
+* component[differentiationGrade] ^short = "Histologic grade (G1-G2 low / G3 high)"
+
+* component[sccGrade].code.text = "Squamous cell carcinoma grade"
+* component[sccGrade].value[x] only CodeableConcept
+* component[sccGrade].valueCodeableConcept from SccGradingVS (required)
+* component[sccGrade] ^short = "SCC grading (G1/G2/G3), used only for squamous cell carcinoma"

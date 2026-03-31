@@ -8,6 +8,7 @@ Description: "Profile for recording bleeding control procedures performed during
 
 * status MS
 * code 1..1 MS
+* code from BleedingControlMethodVS (required)
 * code ^short = "Bleeding control method (clip, epinephrine injection, etc.)"
 * subject 1..1 MS
 * subject only Reference(PatientLt)
