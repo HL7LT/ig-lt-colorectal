@@ -4,7 +4,7 @@
 
 #### Baziniai ištekliai
 
-- Paciento, specialisto ir organizacijos pavyzdžiai, naudojami visuose storosios žarnos skriningo pavyzdžiuose
+- Visuose kolorektalinės patikros pavyzdžiuose naudojami pacientų, sveikatos priežiūros specialistų ir organizacijų pavyzdžiai
 
 #### Kolonoskopo pasiekiamumas
 
@@ -30,8 +30,8 @@
 
 #### Komplikacijos
 
-- [No complication](Observation-observation-colonoscopy-complication-presence-no-example.html) -- komplikacija neįvyko
-- [Complication present](Observation-observation-colonoscopy-complication-presence-yes-example.html) -- komplikacija įvyko
+- [No complication](Observation-observation-colonoscopy-complication-presence-no-example.html) -- Nėra komplikacijų
+- [Complication present](Observation-observation-colonoscopy-complication-presence-yes-example.html) -- Yra komplikacijų
 - Komplikacijos tipo pavyzdžiai: kraujavimas, anestezija, organo perforacija, storosios žarnos perforacija
 - Sienelės pažeidimų pavyzdžiai su Sidnėjaus klasifikacija (III, IV, V tipai) ir atitinkamais veiksmais
 
