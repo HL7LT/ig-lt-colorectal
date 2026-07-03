@@ -93,13 +93,13 @@ Individual polyps are documented using the [Polyp Finding](StructureDefinition-o
 
 Photo documentation is linked via `derivedFrom` references to Media/DocumentReference resources (minimum 2 photos per polyp: white light and chromoendoscopy).
 
-When a polyp is removed, a Polypectomy Procedure is recorded with details about the removal method (from [Polypectomy Method VS](ValueSet-polypectomy-method.html)): snare loop, pliers, hot/cold method, en bloc or in parts, and hydropreparation technique.
+When a polyp is removed, a [Polypectomy Procedure](StructureDefinition-procedure-polypectomy-lt-colorectal.html) is recorded with details about the removal method (from [Polypectomy Method VS](ValueSet-polypectomy-method.html)): snare loop, pliers, hot/cold method, en bloc or in parts, and hydropreparation technique.
 
 If the polyp is sent for histological examination, the biopsy procedure, sample number, and pathology response are tracked. The **adenoma detection rate** quality indicator is calculated from pathology results.
 
 **Examples**:
 - [Polyp found](Observation-observation-polyp-found-example.html)
-- Polypectomy
+- [Polypectomy](Procedure-procedure-polypectomy-example.html)
 
 ##### 2.5 Tumor Findings
 
