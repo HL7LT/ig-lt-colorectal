@@ -93,13 +93,13 @@ Atskiri polipai dokumentuojami naudojant [Polyp Finding](StructureDefinition-obs
 
 Fotofiksacija susieta per `derivedFrom` nuorodas į Media/DocumentReference išteklius (mažiausiai 2 nuotraukos vienam polipui: balta šviesa ir chromoendoskopija).
 
-Pašalinus polipą, registruojama [Polypectomy Procedure](StructureDefinition-procedure-polypectomy-lt-colorectal.html) su detalėmis apie pašalinimo metodą (iš [Polypectomy Method VS](ValueSet-polypectomy-method.html)): kilpos žąslai, replės, karštas/šaltas metodas, en bloc arba dalimis, bei hidroparuošimo technika.
+Pašalinus polipą, registruojama Polypectomy Procedure su detalėmis apie pašalinimo metodą (iš [Polypectomy Method VS](ValueSet-polypectomy-method.html)): kilpos žąslai, replės, karštas/šaltas metodas, en bloc arba dalimis, bei hidroparuošimo technika.
 
 Jei polipas siunčiamas histologiniam tyrimui, stebima biopsijos procedūra, mėginio numeris ir patologijos atsakymas. **Adenomos aptikimo rodiklio** kokybės rodiklis apskaičiuojamas iš patologijos rezultatų.
 
 **Pavyzdžiai**:
 - [Polyp found](Observation-observation-polyp-found-example.html)
-- [Polypectomy](Procedure-procedure-polypectomy-example.html)
+- Polypectomy
 
 ##### 2.5 Navikų radiniai
 
