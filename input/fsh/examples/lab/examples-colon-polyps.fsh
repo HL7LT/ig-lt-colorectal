@@ -149,7 +149,6 @@ Description: "Example recording a colon polyp, properly mapped to the Colorectal
 * component[smsaLevel].code = ColorectalPolypCodesLt#comp-smsa-level
 * component[smsaLevel].valueCodeableConcept = ColorectalPolypCodesLt#smsa-lvl-3 "Level III (9-12 points)"
 
-/*
 CodeSystem: ColorectalPolypectomyCodesLt
 Id: colorectal-polypectomy-codes-lt
 Title: "Colorectal - Local Polypectomy Codes CS"
@@ -303,5 +302,3 @@ Description: "Example recording the removal of a polyp perfectly conforming to t
 
 // 5. Histology Status (Sent) 
 * outcome = ColorectalPolypectomyCodesLt#hist-sent "Sent for histological examination"
-
-*/
