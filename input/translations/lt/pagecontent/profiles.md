@@ -10,7 +10,7 @@
 #### Procedūros
 
 - [Colonoscopy Procedure](StructureDefinition-colonoscopy-procedure-lt-colorectal.html) -- kolonoskopijos procedūra su anestezijos ir indikacijos detalėmis
-- [Polypectomy Procedure](StructureDefinition-procedure-polypectomy-lt-colorectal.html) -- polipo pašalinimo procedūra su metodo detalėmis
+- Polypectomy Procedure -- polipo pašalinimo procedūra su metodo detalėmis
 - [Colonoscopy Bleeding Control](StructureDefinition-colonoscopy-bleeding-control-lt-colorectal.html) -- kraujavimo kontrolė kolonoskopijos metu
 
 #### Stebėjimai – kolonoskopiniai radiniai

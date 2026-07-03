@@ -10,7 +10,7 @@ This page lists all StructureDefinition profiles defined in this Implementation 
 #### Procedures
 
 - [Colonoscopy Procedure](StructureDefinition-colonoscopy-procedure-lt-colorectal.html) -- the colonoscopy procedure with anesthesia and indication details
-- [Polypectomy Procedure](StructureDefinition-procedure-polypectomy-lt-colorectal.html) -- polyp removal procedure with method details
+- Polypectomy Procedure -- polyp removal procedure with method details
 - [Colonoscopy Bleeding Control](StructureDefinition-colonoscopy-bleeding-control-lt-colorectal.html) -- bleeding control during colonoscopy
 
 #### Observations -- Colonoscopy Findings

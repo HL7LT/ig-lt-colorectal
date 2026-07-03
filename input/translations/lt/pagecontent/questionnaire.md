@@ -14,10 +14,10 @@ Klausimynas suskirstytas į šias grupes:
 |-------|---------|----------------|
 | Pagrindinė informacija | Procedūros data, anestezija, vaizdo kolonoskopas, pasitraukimo laikas | Procedūra, Vizitas |
 | Žarnyno paruošimas | Kokybės vertinimas, BBPS balas pagal segmentą, dietos rekomendacijos, padalinta dozė, rašytinė informacija | [Bowel Preparation Quality examples](Observation-observation-bowel-prep-effective-example.html), [BBPS Left colon sample](Observation-observation-bbps-left-colon-example.html), [BBPS Transverse colon sample](Observation-observation-bbps-transverse-colon-example.html) |
-| Kolonoskopo pasiekiamumas | Toliausias pasiektas anatominis taškas | [ObservationColonoscopeReachLtColorectal](StructureDefinition-observation-colonoscope-reach-lt-colorectal.html) |
+| Kolonoskopo pasiekiamumas | Toliausias pasiektas anatominis taškas | [ObservationColonoscopeReachLtColorectal](StructureDefinition-colonoscope-reach-lt-colorectal.html) |
 | Polipų radiniai | Lokalizacija, dydis, Paryžiaus/NICE klasifikacija, SMSA balas, pašalinimo metodas | [Polyp examples](Observation-observation-polyp-found-example.html) |
 | Navikų radiniai | Lokalizacija, aprašymas, biopsijos statusas | [Tumor examples](Observation-observation-tumor-found-example.html) |
-| Komplikacijos | Buvimas, tipas, sienelės pažeidimas (Sidnėjus), kraujavimo kontrolė | [Complication profiles](StructureDefinition-observation-colonoscopy-complication-presence-lt-colorectal.html), [Wall Injury](StructureDefinition-observation-colonoscopy-wall-injury-detail-lt-colorectal.html) |
+| Komplikacijos | Buvimas, tipas, sienelės pažeidimas (Sidnėjus), kraujavimo kontrolė | [Complication profiles](StructureDefinition-colonoscopy-complication-presence-lt-colorectal.html), [Wall Injury](StructureDefinition-colonoscopy-wall-injury-detail-lt-colorectal.html) |
 | Išvados | Diagnostinės išvados | [Conclusion examples](Observation-observation-conclusion-normal-example.html) |
 | Rekomendacijos | Pakartotinės apžiūros intervalas | CarePlan |
 
@@ -26,10 +26,10 @@ Klausimynas suskirstytas į šias grupes:
 Kiekvienas klausimyno elementas susiejamas su struktūrizuotais FHIR ištekliais:
 
 - **Žarnyno paruošimas** → Stebėjimo atvejai, dokumentuojantys BBPS balus pagal segmentą ir bendrą kokybę
-- **Kolonoskopo pasiekiamumas** → [ObservationColonoscopeReachLtColorectal](StructureDefinition-observation-colonoscope-reach-lt-colorectal.html) su anatominiu vietu iš [ColonoscopeReachLtColorectalVS](ValueSet-colonoscope-reach-lt-colorectal.html)
+- **Kolonoskopo pasiekiamumas** → [ObservationColonoscopeReachLtColorectal](StructureDefinition-colonoscope-reach-lt-colorectal.html) su anatominiu vietu iš [ColonoscopeReachLtColorectalVS](ValueSet-colonoscope-reach.html)
 - **Polipų radiniai** → Stebėjimo atvejai su Paryžiaus klasifikacija, NICE klasifikacija, SMSA balo skaičiavimu ir polipektomijos detalėmis
 - **Navikų radiniai** → Stebėjimo atvejai su anatomine lokalizacija ir biopsijos statusu
-- **Komplikacijos** → [Complication Presence](StructureDefinition-observation-colonoscopy-complication-presence-lt-colorectal.html), [Complication Type](StructureDefinition-observation-colonoscopy-complication-type-lt-colorectal.html) ir [Wall Injury Detail](StructureDefinition-observation-colonoscopy-wall-injury-detail-lt-colorectal.html)
+- **Komplikacijos** → [Complication Presence](StructureDefinition-colonoscopy-complication-presence-lt-colorectal.html), [Complication Type](StructureDefinition-colonoscopy-complication-type-lt-colorectal.html) ir [Wall Injury Detail](StructureDefinition-colonoscopy-wall-injury-detail-lt-colorectal.html)
 
 ##### Tarpžinybinė integracija
 
