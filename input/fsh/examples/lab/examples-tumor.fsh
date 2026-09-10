@@ -1,19 +1,6 @@
 // ValueSet moved to terminology/colon-segments-lt-colorectal.fsh as ColorectalAnatomyVS
 
-//use an international yes no VS
-ValueSet: YesNoVS
-Id: yes-no
-Title: "Colorectal - Yes/No VS"
-Description: "Standard Yes/No qualifier values for the Colorectal screening program."
-* ^status = #active
-* ^experimental = false
-* ^publisher = "HL7 Lithuania"
-
-* $sct#373066001 "Yes (qualifier value)"
-* $sct#373067005 "No (qualifier value)"
-
-
-
+// Yes/No answers use the shared value set from the LT Lifestyle guide ($yes-no-url).
 // review intersection with patology IG
 Instance: observation-tumor-found-example
 InstanceOf: ObservationLt

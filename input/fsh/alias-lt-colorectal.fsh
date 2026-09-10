@@ -33,7 +33,6 @@ Alias: $snomed-extension-lt-colorectal-cs-url = https://tx.hl7.lt/fhir/CodeSyste
 
 // Terminology — ValueSets
 Alias: $colonoscope-reach-vs-url = https://tx.hl7.lt/fhir/ValueSet/colonoscope-reach
-Alias: $colonoscopy-complication-presence-vs-url = https://tx.hl7.lt/fhir/ValueSet/colonoscopy-complication-presence
 Alias: $colonoscopy-complication-type-vs-url = https://tx.hl7.lt/fhir/ValueSet/colonoscopy-complication-type
 Alias: $sydney-classification-vs-url = https://tx.hl7.lt/fhir/ValueSet/sydney-classification
 Alias: $colonoscopy-wall-injury-action-vs-url = https://tx.hl7.lt/fhir/ValueSet/colonoscopy-wall-injury-action
