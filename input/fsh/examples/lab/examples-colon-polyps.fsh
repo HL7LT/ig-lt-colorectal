@@ -241,7 +241,7 @@ Description: "The method or technique used to perform the procedure."
 * value[x] only CodeableConcept
 
 Profile: ProcedurePolypectomyLtColorectal
-Parent: Procedure 
+Parent: ProcedureLt
 Id: procedure-polypectomy-lt-colorectal
 Title: "Colonic Polypectomy Procedure (LT Colorectal)"
 Description: "Profile enforcing the mandatory documentation of the polypectomy technique, tools, and histology outcome using local codes."
