@@ -8,7 +8,7 @@ Description: "Colonoscopy screening episode composition for the Lithuanian color
 
 // Procedure section — colonoscopy procedure
 * section[procedure].entry ^slicing.discriminator.type = #profile
-* section[procedure].entry ^slicing.discriminator.path = "$this"
+* section[procedure].entry ^slicing.discriminator.path = "resolve()"
 * section[procedure].entry ^slicing.ordered = false
 * section[procedure].entry ^slicing.rules = #open
 * section[procedure].entry contains

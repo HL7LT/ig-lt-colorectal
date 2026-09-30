@@ -13,7 +13,7 @@ Title: "Observation: FOBT Qualitative Not Detected (example)"
 Description: "Example of a qualitative fecal occult blood test result with 'Not detected' value."
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
-* code = $loinc#80372-6 "Hemoglobin.gastrointestinal [Presence] in Stool by Rapid immunoassay"
+* code = $loinc#80372-6 "Hemoglobin [Presence] in Stool from gastrointestinal by Rapid immunoassay"
 * subject = Reference(patient-male-example)
 * effectiveDateTime = "2026-02-26"
 * specimen = Reference(specimen-stool-fobt-example)
@@ -26,7 +26,7 @@ Title: "Observation: FOBT Qualitative Detected (example)"
 Description: "Example of a qualitative fecal occult blood test result with 'Detected' value."
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
-* code = $loinc#80372-6 "Hemoglobin.gastrointestinal [Presence] in Stool by Rapid immunoassay"
+* code = $loinc#80372-6 "Hemoglobin [Presence] in Stool from gastrointestinal by Rapid immunoassay"
 * subject = Reference(patient-male-example)
 * effectiveDateTime = "2026-02-26"
 * specimen = Reference(specimen-stool-fobt-example)
@@ -52,7 +52,7 @@ Title: "Diagnostic Report: FOBT Qualitative Not Detected (example)"
 Description: "Example of a diagnostic report for a qualitative fecal occult blood test with 'Not detected' result."
 * status = #final
 * subject = Reference(patient-male-example)
-* code = $loinc#80372-6 "Hemoglobin.gastrointestinal [Presence] in Stool by Rapid immunoassay"
+* code = $loinc#80372-6 "Hemoglobin [Presence] in Stool from gastrointestinal by Rapid immunoassay"
 * effectiveDateTime = "2026-02-26"
 * performer = Reference(practitioner-example)
 * specimen = Reference(specimen-stool-fobt-example)
