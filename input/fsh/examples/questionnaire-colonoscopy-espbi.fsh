@@ -95,7 +95,7 @@ Description: "ESPBI form for colonoscopy in the Lithuanian colorectal cancer scr
 * item[=].item[=].type = #coding
 * item[=].item[=].answerOption[+].valueCoding = $sct#373066001 "Yes"
 * item[=].item[=].answerOption[+].valueCoding = $sct#373067005 "No"
-* item[=].item[=].answerOption[+].valueCoding = $sct#48031000087101 "Postponed"
+* item[=].item[=].answerOption[+].valueCoding = $sct#416237000 "Procedure not done (situation)"
 
 * item[=].item[+].linkId = "basicInfo.previousAbdominalSurgery"
 * item[=].item[=].text = "History of major abdominal surgery"

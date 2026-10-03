@@ -152,58 +152,91 @@ Description: "Example recording a colon polyp, properly mapped to the Colorectal
 CodeSystem: ColorectalPolypectomyCodesLt
 Id: colorectal-polypectomy-codes-lt
 Title: "Colorectal - Local Polypectomy Codes CS"
-Description: "Local codes for polypectomy techniques, instruments, and hydropreparation used in the colorectal screening program."
+Description: "Local codes for polypectomy excision method and histology status. The lumen filling, instrument and hydropreparation concepts live in their own code systems so that Procedure.used can be sliced on the code system."
 * ^status = #active
 * ^experimental = false
 * ^publisher = "HL7 Lithuania"
 * ^caseSensitive = true
 
-// Lumen Filling Options
-* #fill-air "Filling the space with air"
-* #fill-water "Filling the container with water"
 
-// Instrument & Energy Options
-* #inst-loop-hot "With a loop - Hot method"
-* #inst-loop-cold "With a loop - Cold method"
-* #inst-pliers "With pliers"
 
 // Excision Method Options
 * #exc-en-bloc "En bloc"
 * #exc-parts "Parts (Piecemeal)"
 
-// Hydropreparation Options
+
+// Histology Status
+* #hist-sent "Sent for histological examination"
+* #hist-not-sent "Not sent"
+
+
+CodeSystem: ColorectalPolypectomyLumenFillingCodesLt
+Id: colorectal-polypectomy-lumen-filling-codes-lt
+Title: "Colorectal - Polypectomy Lumen Filling Codes CS"
+Description: "Medium used to distend the bowel lumen during polypectomy."
+* ^url = "https://hl7.lt/fhir/colorectal/CodeSystem/colorectal-polypectomy-lumen-filling-codes-lt"
+* ^status = #active
+* ^experimental = false
+* ^publisher = "HL7 Lithuania"
+* ^caseSensitive = true
+* #fill-air "Filling the space with air"
+* #fill-water "Filling the container with water"
+
+
+CodeSystem: ColorectalPolypectomyInstrumentCodesLt
+Id: colorectal-polypectomy-instrument-codes-lt
+Title: "Colorectal - Polypectomy Instrument Codes CS"
+Description: "Instrument and energy method used to remove the polyp."
+* ^url = "https://hl7.lt/fhir/colorectal/CodeSystem/colorectal-polypectomy-instrument-codes-lt"
+* ^status = #active
+* ^experimental = false
+* ^publisher = "HL7 Lithuania"
+* ^caseSensitive = true
+* #inst-loop-hot "With a loop - Hot method"
+* #inst-loop-cold "With a loop - Cold method"
+* #inst-pliers "With pliers"
+
+
+CodeSystem: ColorectalPolypectomyHydroprepCodesLt
+Id: colorectal-polypectomy-hydroprep-codes-lt
+Title: "Colorectal - Polypectomy Hydropreparation Codes CS"
+Description: "Solution injected to lift the polyp before excision."
+* ^url = "https://hl7.lt/fhir/colorectal/CodeSystem/colorectal-polypectomy-hydroprep-codes-lt"
+* ^status = #active
+* ^experimental = false
+* ^publisher = "HL7 Lithuania"
+* ^caseSensitive = true
 * #hydro-pending "Hydropreparation pending (None)"
 * #hydro-phys-sol "Physiological solution"
 * #hydro-adrenaline "Adrenaline"
 * #hydro-meth-blue "Methylene blue"
 * #hydro-gelofusine "Gelofusine"
 
-// Histology Status
-* #hist-sent "Sent for histological examination"
-* #hist-not-sent "Not sent"
-
 ValueSet: PolypectomyLumenFillingLtColorectal
 Id: polypectomy-lumen-filling-lt-colorectal
 Title: "Colorectal - Polypectomy Lumen Filling VS"
+Description: "Medium used to distend the bowel lumen during polypectomy: air or water."
 * ^status = #active
 * ^experimental = false
 * ^publisher = "HL7 Lithuania"
-* ColorectalPolypectomyCodesLt#fill-air
-* ColorectalPolypectomyCodesLt#fill-water
+* ColorectalPolypectomyLumenFillingCodesLt#fill-air
+* ColorectalPolypectomyLumenFillingCodesLt#fill-water
 
 ValueSet: PolypectomyInstrumentLtColorectal
 Id: polypectomy-instrument-lt-colorectal
 Title: "Colorectal - Polypectomy Instrument VS"
+Description: "Instrument used to remove the polyp: hot snare, cold snare, or forceps."
 * ^status = #active
 * ^experimental = false
 * ^publisher = "HL7 Lithuania"
-* ColorectalPolypectomyCodesLt#inst-loop-hot
-* ColorectalPolypectomyCodesLt#inst-loop-cold
-* ColorectalPolypectomyCodesLt#inst-pliers
+* ColorectalPolypectomyInstrumentCodesLt#inst-loop-hot
+* ColorectalPolypectomyInstrumentCodesLt#inst-loop-cold
+* ColorectalPolypectomyInstrumentCodesLt#inst-pliers
 
 ValueSet: PolypectomyExcisionMethodLtColorectal
 Id: polypectomy-excision-method-lt-colorectal
 Title: "Colorectal - Polypectomy Excision Method VS"
+Description: "Whether the polyp was excised en bloc or piecemeal."
 * ^status = #active
 * ^experimental = false
 * ^publisher = "HL7 Lithuania"
@@ -213,18 +246,20 @@ Title: "Colorectal - Polypectomy Excision Method VS"
 ValueSet: PolypectomyHydroprepLtColorectal
 Id: polypectomy-hydroprep-lt-colorectal
 Title: "Colorectal - Polypectomy Hydropreparation VS"
+Description: "Solution injected to lift the polyp before excision, including the case where the choice is still pending."
 * ^status = #active
 * ^experimental = false
 * ^publisher = "HL7 Lithuania"
-* ColorectalPolypectomyCodesLt#hydro-pending
-* ColorectalPolypectomyCodesLt#hydro-phys-sol
-* ColorectalPolypectomyCodesLt#hydro-adrenaline
-* ColorectalPolypectomyCodesLt#hydro-meth-blue
-* ColorectalPolypectomyCodesLt#hydro-gelofusine
+* ColorectalPolypectomyHydroprepCodesLt#hydro-pending
+* ColorectalPolypectomyHydroprepCodesLt#hydro-phys-sol
+* ColorectalPolypectomyHydroprepCodesLt#hydro-adrenaline
+* ColorectalPolypectomyHydroprepCodesLt#hydro-meth-blue
+* ColorectalPolypectomyHydroprepCodesLt#hydro-gelofusine
 
 ValueSet: PolypectomyHistologyStatusLtColorectal
 Id: polypectomy-histology-status-lt-colorectal
 Title: "Colorectal - Polypectomy Histology Status VS"
+Description: "Whether the excised polyp was sent for histological examination, and the state of that request."
 * ^status = #active
 * ^experimental = false
 * ^publisher = "HL7 Lithuania"
@@ -262,8 +297,17 @@ Description: "Profile enforcing the mandatory documentation of the polypectomy t
 * outcome from PolypectomyHistologyStatusLtColorectal (required)
 
 // 3. Lumen Filling, Instrument, and Hydroprep
-* used ^slicing.discriminator.type = #value
-* used ^slicing.discriminator.path = "concept"
+// Slicing a CodeableReference by its bound value set does not fully work in the
+// publisher. With the discriminator on "concept" it could not be evaluated at all,
+// because SUSHI refuses a binding on a CodeableReference underlying .concept path and
+// the binding therefore sits on used[x] itself. Pointing the discriminator at $this,
+// where the binding is, lets it be evaluated — nine errors became three — but the
+// validator still does not match an instance to a slice, so each required slice is
+// reported missing even though all three are present and correctly coded. A pattern
+// cannot replace the binding here: every slice admits two to five codes, all from the
+// same code system, so no single fixed value discriminates them.
+* used ^slicing.discriminator.type = #pattern
+* used ^slicing.discriminator.path = "concept.coding.system"
 * used ^slicing.rules = #open
 
 * used contains
@@ -274,6 +318,9 @@ Description: "Profile enforcing the mandatory documentation of the polypectomy t
 * used[lumenFilling] from PolypectomyLumenFillingLtColorectal (required)
 * used[instrument] from PolypectomyInstrumentLtColorectal (required)
 * used[hydroprep] from PolypectomyHydroprepLtColorectal (required)
+* used[lumenFilling].concept.coding.system = "https://hl7.lt/fhir/colorectal/CodeSystem/colorectal-polypectomy-lumen-filling-codes-lt"
+* used[instrument].concept.coding.system = "https://hl7.lt/fhir/colorectal/CodeSystem/colorectal-polypectomy-instrument-codes-lt"
+* used[hydroprep].concept.coding.system = "https://hl7.lt/fhir/colorectal/CodeSystem/colorectal-polypectomy-hydroprep-codes-lt"
 
 Instance: procedure-polypectomy-example
 InstanceOf: ProcedurePolypectomyLtColorectal
@@ -292,13 +339,13 @@ Description: "Example recording the removal of a polyp perfectly conforming to t
 * extension[method].valueCodeableConcept = ColorectalPolypectomyCodesLt#exc-en-bloc "En bloc"
 
 // 2. Lumen Filling (Air)
-* used[lumenFilling].concept = ColorectalPolypectomyCodesLt#fill-air "Filling the space with air"
+* used[lumenFilling].concept = ColorectalPolypectomyLumenFillingCodesLt#fill-air "Filling the space with air"
 
 // 3. Instrument / Energy (Cold Snare loop)
-* used[instrument].concept = ColorectalPolypectomyCodesLt#inst-loop-cold "With a loop - Cold method"
+* used[instrument].concept = ColorectalPolypectomyInstrumentCodesLt#inst-loop-cold "With a loop - Cold method"
 
 // 4. Hydropreparation (Adrenaline)
-* used[hydroprep].concept = ColorectalPolypectomyCodesLt#hydro-adrenaline "Adrenaline"
+* used[hydroprep].concept = ColorectalPolypectomyHydroprepCodesLt#hydro-adrenaline "Adrenaline"
 
 // 5. Histology Status (Sent) 
 * outcome = ColorectalPolypectomyCodesLt#hist-sent "Sent for histological examination"
